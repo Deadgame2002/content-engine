@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <article>
   {% if image %}
-  <img class="cover" src="{{ image }}" alt="{{ title }}">
+  <img class="cover" src="{{ image }}" alt="{{ image_alt or title }}">
   {% endif %}
   <h1>{{ title }}</h1>
   <p class="meta">{{ date }}</p>
@@ -16,3 +16,24 @@ layout: base.njk
     <a href="{{ site.ref_link }}" rel="sponsored noopener" target="_blank">Explore Creative Fabrica →</a>
   </div>
 </article>
+
+{% if faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

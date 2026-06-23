@@ -11,11 +11,13 @@ import { fileURLToPath } from "url";
 import { generateArticle } from "./deepseek.js";
 import { generateImage } from "./imagegen.js";
 import { uploadToImgbb } from "./imgbb.js";
+import { pickRefLink } from "./links.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
-const REF_LINK = "https://www.creativefabrica.com/ref/8793785/";
+// Резервная ссылка, если для сайта не задана категория или конфиг ссылок пуст
+const FALLBACK_REF_LINK = "https://www.creativefabrica.com/ref/8793785/";
 
 function copyTemplateRecursive(src, dest, skipDirs = []) {
   fs.mkdirSync(dest, { recursive: true });
@@ -72,10 +74,16 @@ async function processSite(site) {
   for (let i = 0; i < postsPerRun; i++) {
     try {
       console.log(`[${site.id}] Генерирую статью через DeepSeek...`);
+
+      const refLink = pickRefLink(site.link_category) || FALLBACK_REF_LINK;
+      console.log(`[${site.id}] Использую ссылку: ${refLink}`);
+
       const article = await generateArticle({
         niche: site.niche,
         lang: site.lang || "en",
-        refLink: REF_LINK,
+        refLink,
+        tone: site.tone,
+        targetAudience: site.target_audience,
       });
 
       console.log(`[${site.id}] Статья готова: "${article.title}"`);
@@ -100,6 +108,30 @@ async function processSite(site) {
   }
 }
 
+function buildFaqMarkdown(faq) {
+  if (!Array.isArray(faq) || faq.length === 0) return "";
+  const items = faq
+    .map((item) => `### ${item.question}\n\n${item.answer}`)
+    .join("\n\n");
+  return `\n\n## Часто задаваемые вопросы\n\n${items}\n`;
+}
+
+function yamlEscape(str) {
+  return String(str || "")
+    .replace(/\r?\n/g, " ")
+    .replace(/"/g, '\\"');
+}
+
+function buildFaqYaml(faq) {
+  if (!Array.isArray(faq) || faq.length === 0) return null;
+  const lines = ["faq:"];
+  for (const item of faq) {
+    lines.push(`  - question: "${yamlEscape(item.question)}"`);
+    lines.push(`    answer: "${yamlEscape(item.answer)}"`);
+  }
+  return lines.join("\n");
+}
+
 function saveArticle(site, article, imageUrl) {
   const date = new Date();
   const dateStr = date.toISOString().split("T")[0];
@@ -109,24 +141,31 @@ function saveArticle(site, article, imageUrl) {
   const postsDir = path.join(ROOT, "sites", site.id, "posts");
   fs.mkdirSync(postsDir, { recursive: true });
 
+  const imageAlt = article.image_alt || article.title;
+  const faqYaml = buildFaqYaml(article.faq);
+
   const frontMatter = [
     "---",
     `layout: post.njk`,
     `permalink: "/posts/${slug}/index.html"`,
-    `title: "${article.title.replace(/"/g, '\\"')}"`,
+    `title: "${yamlEscape(article.title)}"`,
     `date: ${dateStr}`,
-    `excerpt: "${(article.excerpt || "").replace(/"/g, '\\"')}"`,
-    `keywords: [${(article.keywords || []).map((k) => `"${k}"`).join(", ")}]`,
+    `excerpt: "${yamlEscape(article.excerpt)}"`,
+    `meta_description: "${yamlEscape(article.meta_description || article.excerpt)}"`,
+    `image_alt: "${yamlEscape(imageAlt)}"`,
+    `keywords: [${(article.keywords || []).map((k) => `"${yamlEscape(k)}"`).join(", ")}]`,
     imageUrl ? `image: "${imageUrl}"` : null,
+    faqYaml,
     "---",
     "",
   ]
     .filter(Boolean)
     .join("\n");
 
-  const imageMarkdown = imageUrl ? `![${article.title}](${imageUrl})\n\n` : "";
+  const imageMarkdown = imageUrl ? `![${imageAlt}](${imageUrl})\n\n` : "";
+  const faqMarkdown = buildFaqMarkdown(article.faq);
 
-  const fullContent = frontMatter + imageMarkdown + (article.body_markdown || "");
+  const fullContent = frontMatter + imageMarkdown + (article.body_markdown || "") + faqMarkdown;
 
   const filePath = path.join(postsDir, filename);
   fs.writeFileSync(filePath, fullContent, "utf-8");

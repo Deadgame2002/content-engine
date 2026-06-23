@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or "Blog" }}{% if title %} | {{ site.site_name }}{% endif %}</title>
-  <meta name="description" content="{{ excerpt or site.site_description }}">
+  <meta name="description" content="{{ meta_description or excerpt or site.site_description }}">
+  <link rel="canonical" href="{{ site.base_url }}{{ page.url }}">
+
+  <meta property="og:type" content="{% if title %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ title or site.site_name }}">
+  <meta property="og:description" content="{{ meta_description or excerpt or site.site_description }}">
+  <meta property="og:url" content="{{ site.base_url }}{{ page.url }}">
+  {% if image %}<meta property="og:image" content="{{ image }}">{% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or site.site_name }}">
+  <meta name="twitter:description" content="{{ meta_description or excerpt or site.site_description }}">
+  {% if image %}<meta name="twitter:image" content="{{ image }}">{% endif %}
   <style>
     :root {
       --bg: #faf8f5;

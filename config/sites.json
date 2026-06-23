@@ -2,24 +2,36 @@
   {
     "id": "site1",
     "domain": "fonts-for-cricut.pages.dev",
+    "base_url": "https://fonts-for-cricut.pages.dev",
     "niche": "Cricut fonts, SVG cut files, crafting fonts",
     "lang": "en",
+    "tone": "дружелюбный, практичный, как опытная подруга-крафтер",
+    "target_audience": "новички и опытные пользователи Cricut, делающие подарки и декор своими руками",
+    "link_category": "fonts",
     "active": true,
     "posts_per_run": 1
   },
   {
     "id": "site2",
     "domain": "wedding-svg-ideas.pages.dev",
+    "base_url": "https://wedding-svg-ideas.pages.dev",
     "niche": "wedding invitation templates, wedding SVG, calligraphy fonts",
     "lang": "en",
+    "tone": "вдохновляющий, тёплый, немного романтичный",
+    "target_audience": "невесты и организаторы свадеб, делающие приглашения и декор самостоятельно",
+    "link_category": "wedding",
     "active": true,
     "posts_per_run": 1
   },
   {
     "id": "site3",
     "domain": "scrapbook-clipart.pages.dev",
+    "base_url": "https://scrapbook-clipart.pages.dev",
     "niche": "scrapbooking clipart, planner stickers, junk journal printables",
     "lang": "en",
+    "tone": "экспертный, детальный, с конкретными примерами применения",
+    "target_audience": "увлечённые скрапбукингом и журналингом, ищущие готовые печатные материалы",
+    "link_category": "scrapbooking",
     "active": true,
     "posts_per_run": 1
   }
