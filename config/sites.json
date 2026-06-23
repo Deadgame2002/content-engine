@@ -1,0 +1,26 @@
+[
+  {
+    "id": "site1",
+    "domain": "fonts-for-cricut.pages.dev",
+    "niche": "Cricut fonts, SVG cut files, crafting fonts",
+    "lang": "en",
+    "active": true,
+    "posts_per_run": 1
+  },
+  {
+    "id": "site2",
+    "domain": "wedding-svg-ideas.pages.dev",
+    "niche": "wedding invitation templates, wedding SVG, calligraphy fonts",
+    "lang": "en",
+    "active": true,
+    "posts_per_run": 1
+  },
+  {
+    "id": "site3",
+    "domain": "scrapbook-clipart.pages.dev",
+    "niche": "scrapbooking clipart, planner stickers, junk journal printables",
+    "lang": "en",
+    "active": true,
+    "posts_per_run": 1
+  }
+]

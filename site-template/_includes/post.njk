@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<article>
+  {% if image %}
+  <img class="cover" src="{{ image }}" alt="{{ title }}">
+  {% endif %}
+  <h1>{{ title }}</h1>
+  <p class="meta">{{ date }}</p>
+
+  {{ content | safe }}
+
+  <div class="cta-box">
+    <strong>Looking for fonts, SVGs or printable designs?</strong>
+    <p style="margin:6px 0 0;color:var(--muted);">Browse thousands of ready-to-use fonts, SVG cut files and craft graphics.</p>
+    <a href="{{ site.ref_link }}" rel="sponsored noopener" target="_blank">Explore Creative Fabrica →</a>
+  </div>
+</article>

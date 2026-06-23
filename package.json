@@ -1,0 +1,12 @@
+{
+  "name": "content-engine",
+  "version": "1.0.0",
+  "description": "Автоматическая генерация статей с картинками и партнёрскими ссылками Creative Fabrica",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
