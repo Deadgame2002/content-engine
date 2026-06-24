@@ -111,20 +111,6 @@ If you found this comparison helpful, you might also enjoy a future article on h
 ## Frequently Asked Questions
 
 ### Can I use a font as an SVG?
-Not directly. Fonts are text files; SVGs are vector images. But you can convert text to a shape in Design Space by welding or using the Slice tool, then save it as an SVG for reuse.
-
-### Which is better for a beginner: fonts or SVGs?
-Fonts are easier to start with because you just type and cut. SVGs require downloading and uploading, but many beginners pick it up quickly.
-
-### Do SVGs work with all Cricut machines?
-Yes, SVGs work with Cricut Explore Air 2, Maker, Maker 3, and Joy (if the file is small enough). Just make sure you’re using the correct upload option in Design Space.
-
-### How do I know if an SVG has a commercial license?
-Check the product description. Sites like Creative Fabrica clearly state whether you can sell items made with their SVGs. Always read the license before buying.
-
-## Часто задаваемые вопросы
-
-### Can I use a font as an SVG?
 
 Not directly. Fonts are text files; SVGs are vector images. But you can convert text to a shape in Design Space by welding or using the Slice tool, then save it as an SVG for reuse.
 
