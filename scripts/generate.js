@@ -91,7 +91,7 @@ async function processSite(site) {
       let imageUrl = null;
       try {
         console.log(`[${site.id}] Генерирую обложку: "${article.image_prompt}"`);
-        const imageBuffer = await generateImage(article.image_prompt);
+        const imageBuffer = await generateImage(article.image_prompt, site.image_style);
 
         console.log(`[${site.id}] Загружаю обложку на imgbb...`);
         imageUrl = await uploadToImgbb(imageBuffer, `${site.id}-${article.slug}`);

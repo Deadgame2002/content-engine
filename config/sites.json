@@ -8,6 +8,7 @@
     "tone": "дружелюбный, практичный, как опытная подруга-крафтер",
     "target_audience": "новички и опытные пользователи Cricut, делающие подарки и декор своими руками",
     "link_category": "fonts",
+    "image_style": "professional product photography, soft natural lighting, high detail, warm color palette",
     "active": true,
     "posts_per_run": 1
   },
@@ -20,6 +21,7 @@
     "tone": "вдохновляющий, тёплый, немного романтичный",
     "target_audience": "невесты и организаторы свадеб, делающие приглашения и декор самостоятельно",
     "link_category": "wedding",
+    "image_style": "elegant editorial photography, soft pastel tones, romantic atmosphere, high detail",
     "active": true,
     "posts_per_run": 1
   },
@@ -32,7 +34,22 @@
     "tone": "экспертный, детальный, с конкретными примерами применения",
     "target_audience": "увлечённые скрапбукингом и журналингом, ищущие готовые печатные материалы",
     "link_category": "scrapbooking",
+    "image_style": "flat lay craft photography, vibrant colors, paper textures, high detail",
     "active": true,
+    "posts_per_run": 1
+  },
+  {
+    "id": "site4_coloring",
+    "domain": "free-coloring-pages-fun.pages.dev",
+    "base_url": "https://free-coloring-pages-fun.pages.dev",
+    "niche": "printable coloring pages for kids and adults, coloring book ideas",
+    "lang": "en",
+    "tone": "лёгкий, весёлый, дружелюбный для родителей и детей",
+    "target_audience": "родители, воспитатели и любители раскрасок (дети и взрослые антистресс-раскраски)",
+    "link_category": "clipart",
+    "image_style": "black and white line art coloring page, bold clean outlines, no shading, no color, simple kid-friendly design, white background",
+    "active": false,
     "posts_per_run": 1
   }
 ]
+
