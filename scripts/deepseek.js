@@ -35,6 +35,7 @@ export async function generateArticle({
   writingStyle,
   suggestedKeywords,
   existingTitles,
+  internalLinks,
 }) {
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) throw new Error("Не задан DEEPSEEK_API_KEY в переменных окружения");
@@ -57,12 +58,18 @@ export async function generateArticle({
       ? `\nНЕ ПОВТОРЯЙ темы уже опубликованных статей на этом сайте, выбери другой угол:\n${existingTitles.slice(-15).map((t) => `- ${t}`).join("\n")}`
       : "";
 
+  const internalLinksHint =
+    Array.isArray(internalLinks) && internalLinks.length > 0
+      ? `\nВНУТРЕННЯЯ ПЕРЕЛИНКОВКА: на сайте уже есть эти статьи. Если хотя бы 1-2 из них тематически связаны с текущей статьёй — естественно сошлись на них ВНУТРИ текста (не списком, а в подходящем месте по смыслу), используя ТОЧНО такой URL, как указан, в формате markdown-ссылки [текст](URL). Если ни одна не подходит по смыслу — не вставляй внутренние ссылки вообще, не придумывай несвязанные:\n${internalLinks.map((p) => `- "${p.title}" → ${p.url}`).join("\n")}`
+      : "";
+
   const systemPrompt = `Ты — опытный контент-маркетолог и SEO-копирайтер с глубокой экспертизой в теме "${niche}".
 Пишешь для нишевого блога с аудиторией: ${effectiveAudience}.
 Тон статьи: ${effectiveTone}.
 Стиль письма (важно соблюдать именно этот стиль, он отличает этот сайт от других): ${effectiveStyle}.
 ${keywordHint}
 ${avoidDuplicateHint}
+${internalLinksHint}
 
 ТРЕБОВАНИЯ К КАЧЕСТВУ (это важно для SEO, не пропускай):
 - Тип статьи на этот раз: ${articleType}

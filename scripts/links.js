@@ -6,6 +6,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { addUtm } from "./utm.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -21,22 +22,24 @@ function loadLinks() {
 }
 
 /**
- * Возвращает случайную ссылку из категории link_category.
+ * Возвращает случайную ссылку из категории link_category, с добавленной UTM-меткой
+ * (если переданы siteId/postSlug — для собственной аналитики кликов).
  * Если категория не найдена или пуста — возвращает ссылку из "default".
  */
-export function pickRefLink(linkCategory) {
+export function pickRefLink(linkCategory, siteId, postSlug) {
   const links = loadLinks();
   const pool = links[linkCategory];
 
+  let chosen;
   if (Array.isArray(pool) && pool.length > 0) {
-    return pool[Math.floor(Math.random() * pool.length)];
+    chosen = pool[Math.floor(Math.random() * pool.length)];
+  } else {
+    const fallback = links.default;
+    chosen =
+      Array.isArray(fallback) && fallback.length > 0
+        ? fallback[Math.floor(Math.random() * fallback.length)]
+        : "https://www.creativefabrica.com/fonts/ref/8793785/?campaign=fonts2";
   }
 
-  const fallback = links.default;
-  if (Array.isArray(fallback) && fallback.length > 0) {
-    return fallback[Math.floor(Math.random() * fallback.length)];
-  }
-
-  // Крайний случай — если даже default не задан
-  return "https://www.creativefabrica.com/?ref=8793785";
+  return siteId ? addUtm(chosen, siteId, postSlug) : chosen;
 }

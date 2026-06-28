@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "generate": "node scripts/generate.js",
-    "refresh": "node scripts/refresh-posts.js"
+    "refresh": "node scripts/refresh-posts.js",
+    "update-links": "node scripts/update-old-links.js"
   }
 }
