@@ -12,6 +12,7 @@ import { generateArticle } from "./deepseek.js";
 import { generateImage } from "./imagegen.js";
 import { uploadToImgbb } from "./imgbb.js";
 import { pickRefLink } from "./links.js";
+import { getNicheKeywordIdeas } from "./keywords.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -64,6 +65,24 @@ function slugify(text) {
     .slice(0, 60);
 }
 
+function getExistingTitles(siteId) {
+  const postsDir = path.join(ROOT, "sites", siteId, "posts");
+  if (!fs.existsSync(postsDir)) return [];
+
+  const titles = [];
+  for (const file of fs.readdirSync(postsDir)) {
+    if (!file.endsWith(".md")) continue;
+    try {
+      const content = fs.readFileSync(path.join(postsDir, file), "utf-8");
+      const match = content.match(/^title:\s*"(.+)"$/m);
+      if (match) titles.push(match[1]);
+    } catch {
+      // если файл не читается — просто пропускаем, не критично
+    }
+  }
+  return titles;
+}
+
 async function processSite(site) {
   console.log(`\n=== Сайт: ${site.id} (${site.domain}) ===`);
 
@@ -73,6 +92,16 @@ async function processSite(site) {
 
   for (let i = 0; i < postsPerRun; i++) {
     try {
+      console.log(`[${site.id}] Получаю реальные запросы людей (Google Autocomplete)...`);
+      const suggestedKeywords = await getNicheKeywordIdeas(site.niche);
+      if (suggestedKeywords.length > 0) {
+        console.log(`[${site.id}] Подсказки: ${suggestedKeywords.join(", ")}`);
+      } else {
+        console.log(`[${site.id}] Подсказок не получено (это не критично, статья сгенерируется и без них).`);
+      }
+
+      const existingTitles = getExistingTitles(site.id);
+
       console.log(`[${site.id}] Генерирую статью через DeepSeek...`);
 
       const refLink = pickRefLink(site.link_category) || FALLBACK_REF_LINK;
@@ -84,24 +113,40 @@ async function processSite(site) {
         refLink,
         tone: site.tone,
         targetAudience: site.target_audience,
+        writingStyle: site.writing_style,
+        suggestedKeywords,
+        existingTitles,
       });
 
       console.log(`[${site.id}] Статья готова: "${article.title}"`);
 
-      let imageUrl = null;
-      try {
-        console.log(`[${site.id}] Генерирую обложку: "${article.image_prompt}"`);
-        const imageBuffer = await generateImage(article.image_prompt, site.image_style);
+      // Генерируем ДВЕ разные картинки — обложку и иллюстрацию в середине статьи.
+      // image_prompt_cover и image_prompt_body должны быть разными промптами (так просили в запросе к DeepSeek),
+      // поэтому даже с одним и тем же style-модификатором сайта итоговые картинки не дублируются.
+      const images = { cover: null, body: null };
 
+      try {
+        console.log(`[${site.id}] Генерирую обложку: "${article.image_prompt_cover}"`);
+        const coverBuffer = await generateImage(article.image_prompt_cover, site.image_style);
         console.log(`[${site.id}] Загружаю обложку на imgbb...`);
-        imageUrl = await uploadToImgbb(imageBuffer, `${site.id}-${article.slug}`);
-        console.log(`[${site.id}] Картинка загружена: ${imageUrl}`);
+        images.cover = await uploadToImgbb(coverBuffer, `${site.id}-${article.slug}-cover`);
+        console.log(`[${site.id}] Обложка загружена: ${images.cover}`);
       } catch (imgErr) {
-        console.error(`[${site.id}] ⚠️ Не удалось сгенерировать/загрузить картинку: ${imgErr.message}`);
-        console.error(`[${site.id}] Статья будет сохранена без картинки.`);
+        console.error(`[${site.id}] ⚠️ Не удалось сгенерировать/загрузить обложку: ${imgErr.message}`);
       }
 
-      saveArticle(site, article, imageUrl);
+      try {
+        const bodyPrompt = article.image_prompt_body || article.image_prompt_cover;
+        console.log(`[${site.id}] Генерирую вторую картинку: "${bodyPrompt}"`);
+        const bodyBuffer = await generateImage(bodyPrompt, site.image_style);
+        console.log(`[${site.id}] Загружаю вторую картинку на imgbb...`);
+        images.body = await uploadToImgbb(bodyBuffer, `${site.id}-${article.slug}-body`);
+        console.log(`[${site.id}] Вторая картинка загружена: ${images.body}`);
+      } catch (imgErr) {
+        console.error(`[${site.id}] ⚠️ Не удалось сгенерировать/загрузить вторую картинку: ${imgErr.message}`);
+      }
+
+      saveArticle(site, article, images);
     } catch (err) {
       console.error(`[${site.id}] ❌ Ошибка генерации статьи: ${err.message}`);
     }
@@ -132,7 +177,19 @@ function buildFaqYaml(faq) {
   return lines.join("\n");
 }
 
-function saveArticle(site, article, imageUrl) {
+function insertImageInMiddle(bodyMarkdown, imageMarkdown) {
+  if (!imageMarkdown) return bodyMarkdown;
+
+  // Вставляем картинку перед серединным абзацем/секцией, чтобы она оказалась
+  // примерно посередине статьи, а не сразу под первым же подзаголовком.
+  const paragraphs = bodyMarkdown.split(/\n\n/);
+  const insertAt = Math.floor(paragraphs.length / 2);
+
+  paragraphs.splice(insertAt, 0, imageMarkdown.trim());
+  return paragraphs.join("\n\n");
+}
+
+function saveArticle(site, article, images) {
   const date = new Date();
   const dateStr = date.toISOString().split("T")[0];
   const slug = article.slug ? slugify(article.slug) : slugify(article.title);
@@ -141,7 +198,8 @@ function saveArticle(site, article, imageUrl) {
   const postsDir = path.join(ROOT, "sites", site.id, "posts");
   fs.mkdirSync(postsDir, { recursive: true });
 
-  const imageAlt = article.image_alt || article.title;
+  const imageAltCover = article.image_alt_cover || article.title;
+  const imageAltBody = article.image_alt_body || article.title;
   const faqYaml = buildFaqYaml(article.faq);
 
   const frontMatter = [
@@ -152,9 +210,9 @@ function saveArticle(site, article, imageUrl) {
     `date: ${dateStr}`,
     `excerpt: "${yamlEscape(article.excerpt)}"`,
     `meta_description: "${yamlEscape(article.meta_description || article.excerpt)}"`,
-    `image_alt: "${yamlEscape(imageAlt)}"`,
+    `image_alt: "${yamlEscape(imageAltCover)}"`,
     `keywords: [${(article.keywords || []).map((k) => `"${yamlEscape(k)}"`).join(", ")}]`,
-    imageUrl ? `image: "${imageUrl}"` : null,
+    images.cover ? `image: "${images.cover}"` : null,
     faqYaml,
     "---",
     "",
@@ -162,10 +220,20 @@ function saveArticle(site, article, imageUrl) {
     .filter(Boolean)
     .join("\n");
 
-  const imageMarkdown = imageUrl ? `![${imageAlt}](${imageUrl})\n\n` : "";
+  const coverMarkdown = images.cover ? `![${imageAltCover}](${images.cover})\n\n` : "";
+  const bodyImageMarkdown = images.body ? `![${imageAltBody}](${images.body})` : "";
+
+  let body = article.body_markdown || "";
+  // Вставляем вторую картинку в середину статьи (если она сгенерировалась).
+  // Если обложка не сгенерировалась, но вторая картинка есть — тогда она уйдёт в начало,
+  // это нормальный fallback на случай частичного сбоя генерации картинок.
+  if (bodyImageMarkdown) {
+    body = insertImageInMiddle(body, bodyImageMarkdown);
+  }
+
   const faqMarkdown = buildFaqMarkdown(article.faq);
 
-  const fullContent = frontMatter + imageMarkdown + (article.body_markdown || "") + faqMarkdown;
+  const fullContent = frontMatter + coverMarkdown + body + faqMarkdown;
 
   const filePath = path.join(postsDir, filename);
   fs.writeFileSync(filePath, fullContent, "utf-8");
