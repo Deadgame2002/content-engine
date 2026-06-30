@@ -8,6 +8,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import yaml from "js-yaml";
 import { generateArticle } from "./deepseek.js";
 import { generateImage } from "./imagegen.js";
 import { uploadToImgbb } from "./imgbb.js";
@@ -70,6 +71,16 @@ function getExistingTitles(siteId) {
   return getExistingPosts(siteId).map((p) => p.title);
 }
 
+function parseFrontMatter(content) {
+  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return null;
+  try {
+    return yaml.load(match[1]);
+  } catch {
+    return null;
+  }
+}
+
 function getExistingPosts(siteId) {
   const postsDir = path.join(ROOT, "sites", siteId, "posts");
   if (!fs.existsSync(postsDir)) return [];
@@ -79,15 +90,14 @@ function getExistingPosts(siteId) {
     if (!file.endsWith(".md")) continue;
     try {
       const content = fs.readFileSync(path.join(postsDir, file), "utf-8");
-      const titleMatch = content.match(/^title:\s*"(.+)"$/m);
-      const permalinkMatch = content.match(/^permalink:\s*"(.+)"$/m);
-      if (titleMatch && permalinkMatch) {
+      const data = parseFrontMatter(content);
+      if (data && data.title && data.permalink) {
         // permalink хранится как "/posts/slug/index.html" — для ссылки в тексте нужен просто "/posts/slug/"
-        const url = permalinkMatch[1].replace(/index\.html$/, "");
-        posts.push({ title: titleMatch[1], url });
+        const url = data.permalink.replace(/index\.html$/, "");
+        posts.push({ title: data.title, url });
       }
     } catch {
-      // если файл не читается — просто пропускаем, не критично
+      // если файл не читается/не парсится — просто пропускаем, не критично
     }
   }
   return posts;
@@ -192,22 +202,6 @@ function buildFaqMarkdown(faq) {
   return `\n\n## Часто задаваемые вопросы\n\n${items}\n`;
 }
 
-function yamlEscape(str) {
-  return String(str || "")
-    .replace(/\r?\n/g, " ")
-    .replace(/"/g, '\\"');
-}
-
-function buildFaqYaml(faq) {
-  if (!Array.isArray(faq) || faq.length === 0) return null;
-  const lines = ["faq:"];
-  for (const item of faq) {
-    lines.push(`  - question: "${yamlEscape(item.question)}"`);
-    lines.push(`    answer: "${yamlEscape(item.answer)}"`);
-  }
-  return lines.join("\n");
-}
-
 function insertImageInMiddle(bodyMarkdown, imageMarkdown) {
   if (!imageMarkdown) return bodyMarkdown;
 
@@ -220,36 +214,80 @@ function insertImageInMiddle(bodyMarkdown, imageMarkdown) {
   return paragraphs.join("\n\n");
 }
 
+function makeUniqueSlug(baseSlug, postsDir) {
+  if (!fs.existsSync(postsDir)) return baseSlug;
+
+  // Собираем все уже занятые slug'и из существующих файлов (по permalink в front matter,
+  // а не по имени файла — так надёжнее, т.к. именно permalink определяет URL и именно
+  // он раньше конфликтовал при сборке 11ty).
+  const usedSlugs = new Set();
+  for (const file of fs.readdirSync(postsDir)) {
+    if (!file.endsWith(".md")) continue;
+    try {
+      const content = fs.readFileSync(path.join(postsDir, file), "utf-8");
+      const data = parseFrontMatter(content);
+      if (data && data.permalink) {
+        const match = data.permalink.match(/^\/posts\/(.+)\/index\.html$/);
+        if (match) usedSlugs.add(match[1]);
+      }
+    } catch {
+      // пропускаем нечитаемые/неразбираемые файлы
+    }
+  }
+
+  if (!usedSlugs.has(baseSlug)) return baseSlug;
+
+  // Коллизия — добавляем числовой суффикс, пока не найдём свободный вариант
+  let counter = 2;
+  let candidate = `${baseSlug}-${counter}`;
+  while (usedSlugs.has(candidate)) {
+    counter += 1;
+    candidate = `${baseSlug}-${counter}`;
+  }
+  console.log(`  ⚠️ Slug "${baseSlug}" уже занят, использую "${candidate}" вместо него.`);
+  return candidate;
+}
+
 function saveArticle(site, article, images) {
   const date = new Date();
   const dateStr = date.toISOString().split("T")[0];
-  const slug = article.slug ? slugify(article.slug) : slugify(article.title);
+  const postsDir = path.join(ROOT, "sites", site.id, "posts");
+
+  const baseSlug = article.slug ? slugify(article.slug) : slugify(article.title);
+  const slug = makeUniqueSlug(baseSlug, postsDir);
   const filename = `${dateStr}-${slug}.md`;
 
-  const postsDir = path.join(ROOT, "sites", site.id, "posts");
   fs.mkdirSync(postsDir, { recursive: true });
 
   const imageAltCover = article.image_alt_cover || article.title;
   const imageAltBody = article.image_alt_body || article.title;
-  const faqYaml = buildFaqYaml(article.faq);
 
-  const frontMatter = [
-    "---",
-    `layout: post.njk`,
-    `permalink: "/posts/${slug}/index.html"`,
-    `title: "${yamlEscape(article.title)}"`,
-    `date: ${dateStr}`,
-    `excerpt: "${yamlEscape(article.excerpt)}"`,
-    `meta_description: "${yamlEscape(article.meta_description || article.excerpt)}"`,
-    `image_alt: "${yamlEscape(imageAltCover)}"`,
-    `keywords: [${(article.keywords || []).map((k) => `"${yamlEscape(k)}"`).join(", ")}]`,
-    images.cover ? `image: "${images.cover}"` : null,
-    faqYaml,
-    "---",
-    "",
-  ]
-    .filter(Boolean)
-    .join("\n");
+  // Собираем front matter как обычный JS-объект и сериализуем через js-yaml.
+  // Это полностью убирает класс ошибок, когда кавычки/двоеточия/переносы строк
+  // в тексте от DeepSeek ломали вручную собранный YAML — js-yaml сам выбирает
+  // правильный стиль кавычек/экранирования для любого значения.
+  const frontMatterData = {
+    layout: "post.njk",
+    permalink: `/posts/${slug}/index.html`,
+    title: article.title || "",
+    date: dateStr,
+    excerpt: article.excerpt || "",
+    meta_description: article.meta_description || article.excerpt || "",
+    image_alt: imageAltCover,
+    keywords: Array.isArray(article.keywords) ? article.keywords : [],
+  };
+
+  if (images.cover) frontMatterData.image = images.cover;
+
+  if (Array.isArray(article.faq) && article.faq.length > 0) {
+    frontMatterData.faq = article.faq.map((item) => ({
+      question: item.question || "",
+      answer: item.answer || "",
+    }));
+  }
+
+  const frontMatterYaml = yaml.dump(frontMatterData, { lineWidth: -1 });
+  const frontMatter = `---\n${frontMatterYaml}---\n\n`;
 
   const coverMarkdown = images.cover ? `![${imageAltCover}](${images.cover})\n\n` : "";
   const bodyImageMarkdown = images.body ? `![${imageAltBody}](${images.body})` : "";

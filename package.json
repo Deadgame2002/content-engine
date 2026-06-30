@@ -7,5 +7,8 @@
     "generate": "node scripts/generate.js",
     "refresh": "node scripts/refresh-posts.js",
     "update-links": "node scripts/update-old-links.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.3.0"
   }
 }

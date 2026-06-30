@@ -9,6 +9,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import yaml from "js-yaml";
 import { refreshArticle } from "./deepseek.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -25,7 +26,13 @@ function loadSites() {
 function parseFrontMatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!match) return null;
-  return { rawFrontMatter: match[1], body: match[2] };
+  try {
+    const data = yaml.load(match[1]) || {};
+    return { data, body: match[2] };
+  } catch (e) {
+    console.log(`  ⚠️ Ошибка парсинга YAML: ${e.message}`);
+    return null;
+  }
 }
 
 function getOldestPosts(siteId, count) {
@@ -41,36 +48,10 @@ function getOldestPosts(siteId, count) {
   return files.slice(0, count);
 }
 
-function extractTitle(rawFrontMatter) {
-  const match = rawFrontMatter.match(/^title:\s*"(.+)"$/m);
-  return match ? match[1] : null;
-}
-
-function replaceField(rawFrontMatter, field, newValue) {
-  const escaped = String(newValue || "").replace(/\r?\n/g, " ").replace(/"/g, '\\"');
-  const regex = new RegExp(`^${field}:.*$`, "m");
-  if (regex.test(rawFrontMatter)) {
-    return rawFrontMatter.replace(regex, `${field}: "${escaped}"`);
-  }
-  return rawFrontMatter + `\n${field}: "${escaped}"`;
-}
-
 function buildFaqMarkdown(faq) {
   if (!Array.isArray(faq) || faq.length === 0) return "";
   const items = faq.map((item) => `### ${item.question}\n\n${item.answer}`).join("\n\n");
   return `\n\n## Часто задаваемые вопросы\n\n${items}\n`;
-}
-
-function buildFaqYaml(faq) {
-  if (!Array.isArray(faq) || faq.length === 0) return null;
-  const lines = ["faq:"];
-  for (const item of faq) {
-    const q = String(item.question || "").replace(/\r?\n/g, " ").replace(/"/g, '\\"');
-    const a = String(item.answer || "").replace(/\r?\n/g, " ").replace(/"/g, '\\"');
-    lines.push(`  - question: "${q}"`);
-    lines.push(`    answer: "${a}"`);
-  }
-  return lines.join("\n");
 }
 
 async function refreshOnePost(site, postPath) {
@@ -81,42 +62,51 @@ async function refreshOnePost(site, postPath) {
     return;
   }
 
-  const title = extractTitle(parsed.rawFrontMatter);
+  const title = parsed.data.title;
   if (!title) {
     console.log(`  ⚠️ Не найден title в: ${postPath}`);
     return;
   }
 
-  // Убираем старый блок FAQ из текста перед отправкой в DeepSeek (он будет пересоздан отдельно)
-  const oldBodyWithoutFaq = parsed.body.split(/\n## Часто задаваемые вопросы/)[0];
+  // Убираем старый блок FAQ и блок баннеров из текста перед отправкой в DeepSeek
+  // (FAQ будет пересоздан отдельно, баннеры — это HTML, не относящийся к самому тексту статьи)
+  let oldBodyForRewrite = parsed.body.split(/\n## Часто задаваемые вопросы/)[0];
+  oldBodyForRewrite = oldBodyForRewrite.replace(/<div class="cf-banners-block">[\s\S]*?<\/div>\n?/, "");
 
   console.log(`  Обновляю: "${title}"`);
 
   const refreshed = await refreshArticle({
     title,
-    oldBodyMarkdown: oldBodyWithoutFaq,
+    oldBodyMarkdown: oldBodyForRewrite,
     niche: site.niche,
     lang: site.lang || "en",
     tone: site.tone,
     writingStyle: site.writing_style,
   });
 
-  let newFrontMatter = parsed.rawFrontMatter;
-  newFrontMatter = replaceField(newFrontMatter, "excerpt", refreshed.excerpt);
-  newFrontMatter = replaceField(newFrontMatter, "meta_description", refreshed.meta_description);
+  // Обновляем только нужные поля, остальное (permalink, image, layout и т.д.) остаётся как было
+  const updatedData = {
+    ...parsed.data,
+    excerpt: refreshed.excerpt || parsed.data.excerpt,
+    meta_description: refreshed.meta_description || parsed.data.meta_description,
+  };
 
-  // Заменяем старый faq-блок (если был) на новый
-  newFrontMatter = newFrontMatter.replace(/\nfaq:\n(?:\s{2}.*\n?)*/m, "");
-  const faqYaml = buildFaqYaml(refreshed.faq);
-  if (faqYaml) newFrontMatter += `\n${faqYaml}`;
+  if (Array.isArray(refreshed.faq) && refreshed.faq.length > 0) {
+    updatedData.faq = refreshed.faq.map((item) => ({
+      question: item.question || "",
+      answer: item.answer || "",
+    }));
+  }
 
-  // Сохраняем картинки как были (cover остаётся в начале body — он не входил в oldBodyWithoutFaq
-  // только если стоял перед текстом; в нашем случае cover вставляется ДО body в файле через frontMatter+coverMarkdown,
-  // поэтому в самом body картинки могут быть — оставляем тело как пришло от DeepSeek, без картинок,
-  // и просто переиспользуем оригинальный файл целиком: тело статьи без изменений картинок не трогаем).
+  const frontMatterYaml = yaml.dump(updatedData, { lineWidth: -1 });
+
+  // Сохраняем любой existing банерный HTML-блок, если он был в старом теле (вставляем перед новым FAQ)
+  const bannerMatch = parsed.body.match(/<div class="cf-banners-block">[\s\S]*?<\/div>\n?/);
+  const bannersHtml = bannerMatch ? `\n\n${bannerMatch[0]}` : "";
+
   const faqMarkdown = buildFaqMarkdown(refreshed.faq);
 
-  const newContent = `---\n${newFrontMatter}\n---\n${refreshed.body_markdown}${faqMarkdown}`;
+  const newContent = `---\n${frontMatterYaml}---\n\n${refreshed.body_markdown}${bannersHtml}${faqMarkdown}`;
 
   fs.writeFileSync(postPath, newContent, "utf-8");
   console.log(`  ✅ Обновлено: ${path.relative(ROOT, postPath)}`);
