@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-permalink: "/posts/vintage-ephemera-clipart-junk-journal-ideas/index.html"
+permalink: "/posts/vintage-ephemera-clipart-junk-journal-ideas-2/index.html"
 title: "10 Creative Ways to Use Vintage Ephemera Clipart in Your Junk Journal Layouts"
 date: 2026-06-25
 excerpt: "Explore 10 inspiring ideas for incorporating vintage ephemera clipart into your junk journal pages, with practical tips on layering, distressing, and mixed media techniques."
