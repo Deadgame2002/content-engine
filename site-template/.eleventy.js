@@ -2,6 +2,10 @@ module.exports = function (eleventyConfig) {
   // Статика (картинки, css) — если будут локальные файлы
   eleventyConfig.addPassthroughCopy("assets");
 
+  // Cloudflare Pages _headers файл — устанавливает правильный Content-Type для sitemap.xml
+  // Без этого Cloudflare отдаёт sitemap как text/html и Google не может его прочитать
+  eleventyConfig.addPassthroughCopy("_headers");
+
   // Простой фильтр для даты в формате ISO (нужен для sitemap.xml)
   eleventyConfig.addFilter("isoDate", function (date) {
     if (!date) return "";
