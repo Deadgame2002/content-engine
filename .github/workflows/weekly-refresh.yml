@@ -19,8 +19,7 @@ jobs:
       - run: npm install
       - name: Обновление старых статей
         env:
-          CF_AI_WORKER_URL: ${{ secrets.CF_AI_WORKER_URL }}
-          CF_AI_WORKER_KEY: ${{ secrets.CF_AI_WORKER_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           REFRESH_POSTS_PER_SITE: "1"
         run: npm run refresh
       - name: Коммит обновлений
