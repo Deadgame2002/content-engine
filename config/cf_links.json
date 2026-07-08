@@ -1,61 +1,33 @@
 {
-  "_comment": "Реальные реф-ссылки Creative Fabrica, полученные из личного кабинета афилиата. Каждая категория — массив ссылок, скрипт links.js выбирает случайную ссылку из подходящей категории и добавляет свои UTM-метки для внутренней аналитики (utm_source/utm_medium/utm_campaign), не трогая партнёрский campaign-параметр.",
-
   "fonts": [
     "https://www.creativefabrica.com/fonts/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/fonts/blackletter-fonts/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/fonts/color-fonts/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/fonts/decorative-fonts/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/fonts/dingbats-fonts/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/fonts/display-fonts/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/product/milkshake-92/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/product/honey-131/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/product/handmade-calligraphy-7/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/ladybug-51/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/shortcake-strawberry/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/simple-handwriting-13/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/lemon-dreams/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/cute-simple-2/ref/8793785/?campaign=fonts2",
     "https://www.creativefabrica.com/product/luxury-chic-and-elegant-font-bundle-4/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/the-lovely-script-font-bundle-2/ref/8793785/?campaign=fonts2",
-    "https://www.creativefabrica.com/product/birthday-svg-bundle-13/ref/8793785/?campaign=fonts2"
+    "https://www.creativefabrica.com/product/the-lovely-script-font-bundle-2/ref/8793785/?campaign=fonts2"
   ],
-
   "wedding": [
     "https://www.creativefabrica.com/search/ref/8793785/?query=Wedding%20Invitations&campaign=clipart3",
     "https://www.creativefabrica.com/product/beautiful-floral-wedding-invitations-11/ref/8793785/?campaign=wedding2",
     "https://www.creativefabrica.com/product/plumeria-watercolor-wedding-invitations-10/ref/8793785/?campaign=wedding2",
-    "https://www.creativefabrica.com/product/mexican-wedding-invitations-12-templates-4/ref/8793785/?campaign=wedding2",
-    "https://www.creativefabrica.com/product/wedding-invitations-with-blue-envelopes/ref/8793785/?campaign=wedding2",
     "https://www.creativefabrica.com/product/greenery-wedding-invitations-bundle/ref/8793785/?campaign=wedding2",
     "https://www.creativefabrica.com/product/wedding-invitations-beach-boho-bundle/ref/8793785/?campaign=wedding2"
   ],
-
   "clipart": [
     "https://www.creativefabrica.com/search/ref/8793785/?query=clipart&campaign=clipart3",
     "https://www.creativefabrica.com/product/cute-elephant-clipart-free/ref/8793785/?campaign=clipart3",
-    "https://www.creativefabrica.com/product/4th-of-july-sublimation-clipart-bundle/ref/8793785/?campaign=clipart3",
-    "https://www.creativefabrica.com/product/denim-girl-clipart/ref/8793785/?campaign=clipart3",
-    "https://www.creativefabrica.com/product/tropical-animals-watercolor-clipart-2/ref/8793785/?campaign=clipart3",
-    "https://www.creativefabrica.com/product/farm-tractor-truck-watercolor-clipart-3/ref/8793785/?campaign=clipart3",
-    "https://www.creativefabrica.com/product/cute-frog-clipart-free/ref/8793785/?campaign=clipart3"
+    "https://www.creativefabrica.com/product/tropical-animals-watercolor-clipart-2/ref/8793785/?campaign=clipart3"
   ],
-
   "scrapbooking": [
     "https://www.creativefabrica.com/3d-svg/ref/8793785/?campaign=papercraft",
     "https://www.creativefabrica.com/subscriptions/graphics/needle-arts/ref/8793785/?campaign=papercraft",
     "https://www.creativefabrica.com/search/ref/8793785/?query=clipart&campaign=clipart3"
   ],
-
-  "papercraft": [
-    "https://www.creativefabrica.com/3d-svg/ref/8793785/?campaign=papercraft",
-    "https://www.creativefabrica.com/subscriptions/graphics/needle-arts/ref/8793785/?campaign=papercraft"
-  ],
-
-  "lasercutting": [
-    "https://www.creativefabrica.com/laser-cutting/ref/8793785/?campaign=lasercutting4"
-  ],
-
   "default": [
     "https://www.creativefabrica.com/fonts/ref/8793785/?campaign=fonts2"
   ]

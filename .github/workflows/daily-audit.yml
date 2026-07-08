@@ -1,0 +1,30 @@
+name: Вечерний аудит сайтов
+
+on:
+  schedule:
+    # Каждый день в 20:00 UTC (23:00 по Риге зимой / 22:00 летом)
+    - cron: "0 20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install
+      - name: Аудит всех сайтов
+        run: npm run audit
+      - name: Сохранить отчёты аудита
+        if: always()
+        run: |
+          git config user.name "content-bot"
+          git config user.email "content-bot@users.noreply.github.com"
+          git add sites/*/audit-report.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Отчёт аудита: $(date -u +'%Y-%m-%d')"
+          git push

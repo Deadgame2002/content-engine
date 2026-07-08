@@ -6,13 +6,11 @@ layout: base.njk
   <img class="cover" src="{{ image }}" alt="{{ image_alt or title }}">
   {% endif %}
   <h1>{{ title }}</h1>
-  <p class="meta">{{ date }}</p>
-
+  <p class="meta">{{ date | isoDate }}</p>
   {{ content | safe }}
-
   <div class="cta-box">
     <strong>Looking for fonts, SVGs or printable designs?</strong>
-    <p style="margin:6px 0 0;color:var(--muted);">Browse thousands of ready-to-use fonts, SVG cut files and craft graphics.</p>
+    <p style="margin:6px 0 0;color:var(--muted);">Browse thousands of ready-to-use fonts, SVG cut files and craft graphics on Creative Fabrica.</p>
     <a href="{{ site.ref_link }}" rel="sponsored noopener" target="_blank">Explore Creative Fabrica →</a>
   </div>
 </article>
@@ -27,10 +25,7 @@ layout: base.njk
     {
       "@type": "Question",
       "name": {{ item.question | dump | safe }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ item.answer | dump | safe }}
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | dump | safe }} }
     }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]

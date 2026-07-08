@@ -6,6 +6,7 @@
   "scripts": {
     "generate": "node scripts/generate.js",
     "refresh": "node scripts/refresh-posts.js",
+    "audit": "node scripts/audit.js",
     "update-links": "node scripts/update-old-links.js"
   },
   "dependencies": {

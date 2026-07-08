@@ -1,15 +1,15 @@
 [
   {
     "id": "site1",
-    "domain": "fonts-for-cricut.pages.dev",
-    "base_url": "https://fonts-for-cricut.pages.dev",
+    "domain": "wherefontlive.xyz",
+    "base_url": "https://wherefontlive.xyz",
     "niche": "Cricut fonts, SVG cut files, crafting fonts",
     "lang": "en",
-    "tone": "дружелюбный, практичный, как опытная подруга-крафтер",
-    "target_audience": "новички и опытные пользователи Cricut, делающие подарки и декор своими руками",
-    "writing_style": "короткие, рубленые предложения, разговорный стиль, как будто рассказываешь другу",
+    "tone": "friendly and practical, like an experienced crafter friend",
+    "target_audience": "Cricut beginners and experienced crafters making gifts and home decor",
+    "writing_style": "short punchy sentences, conversational, like talking to a friend",
     "link_category": "fonts",
-    "image_style": "professional product photography, soft natural lighting, high detail, warm color palette",
+    "image_style": "professional craft photography, warm natural lighting, high detail",
     "active": true,
     "posts_per_run": 1
   },
@@ -19,11 +19,11 @@
     "base_url": "https://wedding-svg-ideas.pages.dev",
     "niche": "wedding invitation templates, wedding SVG, calligraphy fonts",
     "lang": "en",
-    "tone": "вдохновляющий, тёплый, немного романтичный",
-    "target_audience": "невесты и организаторы свадеб, делающие приглашения и декор самостоятельно",
-    "writing_style": "более длинные, плавные предложения с богатой лексикой, экспертный тон",
+    "tone": "inspiring, warm, slightly romantic",
+    "target_audience": "brides and wedding organizers making DIY invitations and decor",
+    "writing_style": "longer flowing sentences with rich vocabulary, expert tone",
     "link_category": "wedding",
-    "image_style": "elegant editorial photography, soft pastel tones, romantic atmosphere, high detail",
+    "image_style": "elegant editorial photography, soft pastel tones, romantic atmosphere",
     "active": true,
     "posts_per_run": 1
   },
@@ -33,26 +33,12 @@
     "base_url": "https://scrapbook-clipart.pages.dev",
     "niche": "scrapbooking clipart, planner stickers, junk journal printables",
     "lang": "en",
-    "tone": "экспертный, детальный, с конкретными примерами применения",
-    "target_audience": "увлечённые скрапбукингом и журналингом, ищущие готовые печатные материалы",
-    "writing_style": "структура вопрос-ответ внутри секций, прямое обращение к читателю 'ты'",
+    "tone": "expert and detailed with concrete examples",
+    "target_audience": "scrapbooking and journaling enthusiasts looking for printable materials",
+    "writing_style": "question-answer structure within sections, direct address to reader",
     "link_category": "scrapbooking",
-    "image_style": "flat lay craft photography, vibrant colors, paper textures, high detail",
+    "image_style": "flat lay craft photography, vibrant colors, paper textures",
     "active": true,
-    "posts_per_run": 1
-  },
-  {
-    "id": "site4_coloring",
-    "domain": "free-coloring-pages-fun.pages.dev",
-    "base_url": "https://free-coloring-pages-fun.pages.dev",
-    "niche": "printable coloring pages for kids and adults, coloring book ideas",
-    "lang": "en",
-    "tone": "лёгкий, весёлый, дружелюбный для родителей и детей",
-    "target_audience": "родители, воспитатели и любители раскрасок (дети и взрослые антистресс-раскраски)",
-    "link_category": "clipart",
-    "image_style": "black and white line art coloring page, bold clean outlines, no shading, no color, simple kid-friendly design, white background",
-    "active": false,
     "posts_per_run": 1
   }
 ]
-

@@ -1,15 +1,10 @@
 {
-  "_comment": "HTML-баннеры Creative Fabrica. 'universal' — баннер, который ставится на КАЖДУЮ статью независимо от ниши. Остальные категории — баннеры, релевантные конкретной нише сайта (выбираются по полю link_category в config/sites.json). Скрипт banners.js добавляет свои UTM-метки к ссылкам автоматически.",
-
   "universal": [
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/ref/8793785/\" title=\"Creative Fabrica\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/12/06/cf-banner-1.jpg\" alt=\"Creative Fabrica\" loading=\"lazy\"></a></div>"
+    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/ref/8793785/\" title=\"Creative Fabrica\" rel=\"sponsored noopener\" target=\"_blank\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/12/06/cf-banner-1.jpg\" alt=\"Creative Fabrica - fonts, SVGs and graphics\" loading=\"lazy\"></a></div>"
   ],
-
   "fonts": [
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Font Banner - Free Fonts\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-01.png\" alt=\"Font Banner - Free Fonts\" loading=\"lazy\"></a></div>",
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Font Banner - Free Fonts\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-04.png\" alt=\"Font Banner - Free Fonts\" loading=\"lazy\"></a></div>",
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Font Banner - Free Fonts\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-05.png\" alt=\"Font Banner - Free Fonts\" loading=\"lazy\"></a></div>",
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Font Banner - Free Fonts\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-06.png\" alt=\"Font Banner - Free Fonts\" loading=\"lazy\"></a></div>",
-    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/discount-deals/ref/8793785/\" title=\"Premium fonts and graphics for just $1\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/10/discount-deals.gif\" alt=\"Premium fonts and graphics for just $1\" loading=\"lazy\"></a></div>"
+    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Free Fonts on Creative Fabrica\" rel=\"sponsored noopener\" target=\"_blank\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-01.png\" alt=\"Free Fonts Banner\" loading=\"lazy\"></a></div>",
+    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/freebies/free-fonts/ref/8793785/\" title=\"Free Fonts on Creative Fabrica\" rel=\"sponsored noopener\" target=\"_blank\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/01/freebie-banners3-party-04.png\" alt=\"Free Fonts Banner\" loading=\"lazy\"></a></div>",
+    "<div class=\"cf-banner\"><a href=\"https://www.creativefabrica.com/discount-deals/ref/8793785/\" title=\"Premium fonts and graphics for just $1\" rel=\"sponsored noopener\" target=\"_blank\"><img src=\"https://www.creativefabrica.com/wp-content/uploads/2018/10/discount-deals.gif\" alt=\"Premium fonts and graphics for $1\" loading=\"lazy\"></a></div>"
   ]
 }
