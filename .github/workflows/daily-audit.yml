@@ -1,8 +1,8 @@
-name: Вечерний аудит сайтов
+name: Вечерний аудит и исправление картинок
 
 on:
   schedule:
-    # Каждый день в 20:00 UTC (23:00 по Риге зимой / 22:00 летом)
+    # Запускается в 20:00 UTC каждый день
     - cron: "0 20 * * *"
   workflow_dispatch: {}
 
@@ -10,6 +10,7 @@ permissions:
   contents: write
 
 jobs:
+  # ШАГ 1 — Аудит сайтов (20:00 UTC)
   audit:
     runs-on: ubuntu-latest
     steps:
@@ -18,13 +19,44 @@ jobs:
         with:
           node-version: "22"
       - run: npm install
-      - name: Аудит всех сайтов
-        run: npm run audit
+
+      - name: Запуск аудита
+        run: npm run audit || true
+
       - name: Сохранить отчёты аудита
-        if: always()
         run: |
           git config user.name "content-bot"
           git config user.email "content-bot@users.noreply.github.com"
           git add sites/*/audit-report.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Отчёт аудита: $(date -u +'%Y-%m-%d')"
+          git push
+
+  # ШАГ 2 — Исправление картинок (21:00 UTC — через час после аудита)
+  fix-images:
+    runs-on: ubuntu-latest
+    needs: audit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install
+
+      - name: Исправление пропущенных картинок
+        env:
+          DEEPINFRA_API_KEY: ${{ secrets.DEEPINFRA_API_KEY }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+          FIX_IMAGES_MAX: "10"
+        run: node scripts/fix-missing-images.js
+
+      - name: Коммит исправлений
+        run: |
+          git config user.name "content-bot"
+          git config user.email "content-bot@users.noreply.github.com"
+          git add sites/
+          git diff --staged --quiet || git commit -m "Автоисправление картинок: $(date -u +'%Y-%m-%d')"
           git push
