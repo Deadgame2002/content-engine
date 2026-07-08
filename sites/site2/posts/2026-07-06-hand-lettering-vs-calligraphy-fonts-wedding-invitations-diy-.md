@@ -23,7 +23,10 @@ faq:
     answer: Calligraphy fonts are generally more affordable for large quantities. A one-time font purchase of $15–$40 covers unlimited use, while hand-lettering supplies may need replacement pens for large projects.
   - question: Can I combine hand-lettering and calligraphy fonts in one invitation suite?
     answer: Yes, and it is a popular trend. Use hand-lettering for the couple's names on the invitation and a calligraphy font for supporting text like date and venue. This balances uniqueness with efficiency.
+image: https://i.ibb.co/tptCMMFq/site2-2026-07-06-hand-lettering-vs-calligraphy-fonts-wedding-invitations-diy-cover.jpg
 ---
+
+![Overhead view of hand-lettering tools and laptop with calligraphy font on screen](https://i.ibb.co/tptCMMFq/site2-2026-07-06-hand-lettering-vs-calligraphy-fonts-wedding-invitations-diy-cover.jpg)
 
 There is a quiet magic in the moment a guest opens your wedding invitation — a tangible whisper of the celebration to come, wrapped in paper and ink. For the modern bride or wedding planner who chooses the path of DIY, that magic often begins with a single, critical decision: will you let your own hand dance across the page with a brush pen, or will you let a beautifully crafted calligraphy font do the work on your computer? Both paths lead to stunning results, but they are profoundly different journeys. In 2025, as technology and tradition continue to intertwine, understanding the nuances of hand-lettering versus calligraphy fonts is more than an aesthetic choice — it is a decision about time, budget, skill, and the very soul of your invitation suite. Let us wander through the details together, exploring which method truly wins for your unique vision.
 

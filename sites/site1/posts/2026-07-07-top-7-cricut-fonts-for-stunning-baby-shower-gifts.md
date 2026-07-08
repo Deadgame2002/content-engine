@@ -21,7 +21,10 @@ faq:
     answer: Adjust letter spacing in Design Space. Use the Letter Space tool to increase gaps until loops don’t touch. Then weld the text before duplicating for the shadow layer.
   - question: Can I use the same font for a baby shower sign and a tumbler?
     answer: Absolutely! Just adjust the size and material. For signs, use thicker fonts or add an outline layer. For tumblers, keep it simpler to avoid weeding headaches on curved surfaces.
+image: https://i.ibb.co/rKmBBdKY/site1-2026-07-07-top-7-cricut-fonts-for-stunning-baby-shower-gifts-cover.jpg
 ---
+
+![Flat lay of Cricut baby shower crafting supplies with sweet baby onesie](https://i.ibb.co/rKmBBdKY/site1-2026-07-07-top-7-cricut-fonts-for-stunning-baby-shower-gifts-cover.jpg)
 
 You’re invited to a baby shower. You want to give something handmade. Something that screams “I put my heart into this.”
 

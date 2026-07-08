@@ -23,7 +23,10 @@ faq:
     answer: Yes, but keep changes within 20% of the original size. Larger resizes can misalign score lines and make assembly difficult.
   - question: Do I need to mirror the SVG for paper flowers?
     answer: Usually no. Mirroring is only for adhesive vinyl. For paper flowers, just place the paper right-side up on the mat.
+image: https://i.ibb.co/hRKm5R3r/site1-2026-07-07-choose-svg-cut-file-3d-paper-flowers-cricut-guide-cover.jpg
 ---
+
+![Completed 3D paper flower from Cricut with pink layered petals on white background](https://i.ibb.co/hRKm5R3r/site1-2026-07-07-choose-svg-cut-file-3d-paper-flowers-cricut-guide-cover.jpg)
 
 So you want to make 3D paper flowers with your Cricut.
 

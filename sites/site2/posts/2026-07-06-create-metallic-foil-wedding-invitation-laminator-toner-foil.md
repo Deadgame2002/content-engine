@@ -24,7 +24,10 @@ faq:
     answer: It is possible but difficult. Textured paper creates tiny gaps where the toner does not contact the foil evenly, resulting in a speckled finish. For best results, use smooth, uncoated cardstock with a matte finish.
   - question: How many invitations can I foil from one roll of foil?
     answer: A standard 12-by-12-inch foil sheet can cover approximately 8 to 10 invitation-sized areas (5x7 inches), depending on the amount of foil coverage in your design. Buying rolls rather than sheets reduces waste and cost per invitation.
+image: https://i.ibb.co/ksxDNxSf/site2-2026-07-06-create-metallic-foil-wedding-invitation-laminator-toner-foil-cover.jpg
 ---
+
+![Flat lay of DIY gold foil wedding invitation with laminator and foiling tools on marble](https://i.ibb.co/ksxDNxSf/site2-2026-07-06-create-metallic-foil-wedding-invitation-laminator-toner-foil-cover.jpg)
 
 There is something almost magical about the way light catches the edge of a metallic foil invitation — that soft, luminous gleam that whispers elegance before a single word is read. For years, this effect was reserved for professional letterpress shops and bespoke stationers, but thanks to a technique called toner-based foiling, you can now achieve that same luxurious finish from the comfort of your own home with nothing more than a laser printer and a standard laminator.
 

@@ -23,7 +23,10 @@ faq:
     answer: For the main text (like the couple's names), use 48-60 points. For event details, use 36-48 points. Always print a test on plain cardstock to see how the size looks in real life before cutting.
   - question: How do I add swashes to letters in Cricut Design Space?
     answer: Cricut Design Space does not natively support glyphs, so use Character Map (Windows) or Font Book (Mac) to copy special characters. Paste them into your design and adjust the size and position as needed.
+image: https://i.ibb.co/wNCB1ZBs/site2-2026-07-06-critical-mistakes-wedding-calligraphy-fonts-fix-cover.jpg
 ---
+
+![Elegant wedding invitation with calligraphy font and gold foil on wooden table](https://i.ibb.co/wNCB1ZBs/site2-2026-07-06-critical-mistakes-wedding-calligraphy-fonts-fix-cover.jpg)
 
 There is something almost magical about the way calligraphy fonts dance across a wedding invitation—the elegant swirls, the delicate flourishes, the way a single word can feel like a whispered promise. Yet for many DIY brides, that magic can quickly turn into frustration when the font doesn't behave as expected on screen or on paper. I have seen countless beautifully designed invitations ruined by subtle errors that could have been avoided with a little know-how. In this article, I will walk you through the five most critical mistakes I have encountered when working with wedding calligraphy fonts, and more importantly, I will show you exactly how to fix each one so your invitations look as polished as a professional calligrapher's work.
 

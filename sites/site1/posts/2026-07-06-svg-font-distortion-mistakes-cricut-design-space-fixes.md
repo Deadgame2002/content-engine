@@ -23,7 +23,10 @@ faq:
     answer: Not necessarily. Free tools like Inkscape work well. The key step is converting text to paths before saving as SVG—this locks the shapes and prevents distortion.
   - question: How do I check if my SVG font will cut correctly before I use vinyl?
     answer: Test with a small piece of scrap vinyl or paper. Also, preview the SVG in a browser—if it looks clean there but distorts in Design Space, the issue is with the import settings.
+image: https://i.ibb.co/0p4sYKFG/site1-2026-07-06-svg-font-distortion-mistakes-cricut-design-space-fixes-cover.jpg
 ---
+
+![Cricut mat with distorted SVG font cut and Design Space on phone](https://i.ibb.co/0p4sYKFG/site1-2026-07-06-svg-font-distortion-mistakes-cricut-design-space-fixes-cover.jpg)
 
 You’ve been there. You import a beautiful SVG cut file into Cricut Design Space. The font looks perfect on your screen. Then you cut it. And... it’s stretched. Or pixelated. Or the letters are all wonky.
 

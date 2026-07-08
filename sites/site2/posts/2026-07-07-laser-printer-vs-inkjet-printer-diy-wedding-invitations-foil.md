@@ -25,7 +25,10 @@ faq:
     answer: For quantities under 50 suites, professional printing may be comparable in cost. For 100+ suites, home printing with a laser printer is significantly cheaper, especially if you do your own foiling.
   - question: Can I print on both sides of the paper with a laser printer?
     answer: Yes, most mid-range laser printers support automatic duplex (double-sided) printing. However, be aware that double-sided printing on heavy cardstock may cause paper jams. Check your printer's specifications for maximum paper weight.
+image: https://i.ibb.co/dJD321zC/site2-2026-07-07-laser-printer-vs-inkjet-printer-diy-wedding-invitations-foil-cover.jpg
 ---
+
+![Hand holding a gold foil wedding invitation next to a laser printer and laminator](https://i.ibb.co/dJD321zC/site2-2026-07-07-laser-printer-vs-inkjet-printer-diy-wedding-invitations-foil-cover.jpg)
 
 There is a quiet moment in every DIY wedding invitation project when the design is perfect, the calligraphy font is chosen, the SVG layers are aligned, and then the question arrives: how do I get this from the screen onto paper with the crispness and finish it deserves?
 

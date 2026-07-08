@@ -23,7 +23,10 @@ faq:
     answer: Yes. You can ungroup layers, change colors, resize, and even add text. But avoid distorting the shapes—always hold the Shift key while resizing to keep proportions.
   - question: Where can I find free SVG cut files for tumblers?
     answer: Creative Fabrica offers free SVG files with their subscription. You can also find freebies on design blogs and Pinterest. Just check the license for commercial use if you plan to sell.
+image: https://i.ibb.co/gFH3VMhZ/site1-2026-07-06-top-8-must-have-svg-cut-files-for-cricut-tumblers-cover.jpg
 ---
+
+![Flat lay of finished tumbler with boho wreath and Cricut tools on white background](https://i.ibb.co/gFH3VMhZ/site1-2026-07-06-top-8-must-have-svg-cut-files-for-cricut-tumblers-cover.jpg)
 
 You know that feeling. You’ve got a plain tumbler. A roll of vinyl. And zero idea where to start.
 

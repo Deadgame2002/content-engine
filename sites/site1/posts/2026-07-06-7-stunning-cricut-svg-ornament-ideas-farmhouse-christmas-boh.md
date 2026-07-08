@@ -23,7 +23,10 @@ faq:
     answer: SVG is the best format. It scales without losing quality. Avoid JPG or PNG for cut files — they rasterize and lose detail. Always use SVG for clean cuts.
   - question: Can I make these ornaments without a Cricut?
     answer: Some ideas (like map ornaments) can be done by hand. But for precision cuts on vinyl, leather, or paper, a Cricut machine saves hours. Hand-cutting intricate SVGs is very difficult.
+image: https://i.ibb.co/WpcRSX4P/site1-2026-07-06-7-stunning-cricut-svg-ornament-ideas-farmhouse-christmas-boh-cover.jpg
 ---
+
+![Flat lay of seven different Cricut SVG ornament projects](https://i.ibb.co/WpcRSX4P/site1-2026-07-06-7-stunning-cricut-svg-ornament-ideas-farmhouse-christmas-boh-cover.jpg)
 
 Let’s be real.
 

@@ -23,7 +23,10 @@ faq:
     answer: Yes, but be careful to maintain a consistent color palette and artistic style. Mixing a loose botanical template with a geometric abstract one can look disjointed.
   - question: How far in advance should I start making my watercolor invitations?
     answer: Give yourself at least 8-12 weeks. Designing, printing, cutting, assembling, and addressing 50-100 suites takes longer than most brides expect, especially if you are new to DIY.
+image: https://i.ibb.co/wZG7sFTJ/site2-2026-07-07-watercolor-wedding-invitation-templates-svg-layers-2025-cover.jpg
 ---
+
+![Watercolor wedding invitation suite with eucalyptus wreath and gold foil accents on rustic table](https://i.ibb.co/wZG7sFTJ/site2-2026-07-07-watercolor-wedding-invitation-templates-svg-layers-2025-cover.jpg)
 
 There is something undeniably enchanting about the way watercolor blooms across paper—soft edges bleeding into one another, translucent petals catching the light as though they are still alive. For a bride designing her own wedding stationery, the choice to work with watercolor is an act of tenderness, a deliberate step away from rigid digital perfection toward something that feels hand-painted, deeply personal, and achingly romantic. And when you pair these watercolor motifs with precisely layered SVG files and a carefully chosen calligraphy font, you unlock a world where artistry meets effortless DIY execution.
 
