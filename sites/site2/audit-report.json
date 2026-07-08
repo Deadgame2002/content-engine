@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-07-08T07:50:55.039Z",
+  "stats": {
+    "total": 21,
+    "ok": 21,
+    "missing_image": 5,
+    "missing_faq": 1,
+    "missing_meta": 1,
+    "bad_yaml": 0,
+    "empty_body": 0
+  },
+  "issues": [],
+  "warnings": [
+    "⚠️ Нет или слишком короткая meta_description: 2026-06-23-mix-calligraphy-fonts-svg-wedding-suite.md",
+    "⚠️ Нет FAQ: 2026-06-23-mix-calligraphy-fonts-svg-wedding-suite.md",
+    "⚠️ Нет обложки (image): 2026-07-06-create-metallic-foil-wedding-invitation-laminator-toner-foil.md",
+    "⚠️ Нет обложки (image): 2026-07-06-critical-mistakes-wedding-calligraphy-fonts-fix.md",
+    "⚠️ Нет обложки (image): 2026-07-06-hand-lettering-vs-calligraphy-fonts-wedding-invitations-diy-.md",
+    "⚠️ Нет обложки (image): 2026-07-07-laser-printer-vs-inkjet-printer-diy-wedding-invitations-foil.md",
+    "⚠️ Нет обложки (image): 2026-07-07-watercolor-wedding-invitation-templates-svg-layers-2025.md"
+  ]
+}
