@@ -23,7 +23,10 @@ faq:
     answer: Your PNG likely has low resolution (72 DPI). For print, use PNGs at 300 DPI or higher. Check the file properties before purchasing or downloading.
   - question: Can I use SVG files in Procreate?
     answer: Procreate can import SVG files, but it flattens them into a single layer and only displays a preview. You cannot edit individual layers. For full SVG support, use vector software.
+image: https://i.ibb.co/HDfwngXj/site3-2026-07-06-png-clipart-vs-svg-files-junk-journaling-comparison-cover.jpg
 ---
+
+![Side-by-side junk journal spread comparing PNG clipart and SVG files](https://i.ibb.co/HDfwngXj/site3-2026-07-06-png-clipart-vs-svg-files-junk-journaling-comparison-cover.jpg)
 
 When you're knee-deep in a junk journal spread, the last thing you want is to fight with your clipart. You want elements that slip into place, scale without turning into a pixelated mess, and layer seamlessly behind your ephemera. Two formats dominate the scene: transparent PNG clipart and layered SVG files. Each has its strengths, but they serve fundamentally different workflows. Let's pull them apart and see which one actually saves you time and effort in your daily journaling practice.
 

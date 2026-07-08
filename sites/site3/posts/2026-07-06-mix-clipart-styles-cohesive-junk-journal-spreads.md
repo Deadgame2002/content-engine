@@ -23,7 +23,10 @@ faq:
     answer: Both work. Digital tools (Procreate, Photoshop) give you more control over color and scaling. Physical materials (real paper, ink, glue) add authentic texture. The principles are the same—choose the method that fits your workflow.
   - question: My spread still looks messy after following all the steps. What's wrong?
     answer: You may be using too many focal points. Pick one main element (from your dominant style) and let everything else support it. Remove any element that doesn't share a color or texture with the main piece.
+image: https://i.ibb.co/7NK3ZyBq/site3-2026-07-06-mix-clipart-styles-cohesive-junk-journal-spreads-cover.jpg
 ---
+
+![Cohesive junk journal spread mixing vintage and modern clipart](https://i.ibb.co/7NK3ZyBq/site3-2026-07-06-mix-clipart-styles-cohesive-junk-journal-spreads-cover.jpg)
 
 You have a folder full of clipart: sepia-toned botanical engravings from the 1800s, bright 1970s retro planner stickers, and crisp modern PNGs of cameras and typewriters. On their own, each set is beautiful. But when you try to combine them in one junk journal spread, the result often looks like a visual mess—like three different journals collided on the same page.
 

@@ -23,7 +23,10 @@ faq:
     answer: Aim for 2.5 x 3.5 inches (about 30-40% of the spread). This leaves room for layering secondary elements and journaling without overcrowding.
   - question: Is it better to store edited clipart as PNG or JPG?
     answer: Always save as PNG. It preserves transparency and supports lossless compression, so you can reuse the clipart on any background without white boxes or quality loss.
+image: https://i.ibb.co/8LpF0BG4/site3-2026-07-06-7-common-junk-journal-clipart-mistakes-vintage-spreads-fixes-cover.jpg
 ---
+
+![Close-up messy junk journal spread with pixelated vintage clipart and white fringes](https://i.ibb.co/8LpF0BG4/site3-2026-07-06-7-common-junk-journal-clipart-mistakes-vintage-spreads-fixes-cover.jpg)
 
 You've spent hours selecting the perfect vintage ephemera clipart, arranging it just so on your junk journal spread. But something feels... off. The colors clash, the edges look harsh, or the scale seems wrong. If this sounds familiar, you're not alone.
 

@@ -23,7 +23,10 @@ faq:
     answer: Google Fonts has excellent free options like Special Elite (typewriter), Playfair Display (serif), and Amatic SC (handwritten). For more historically accurate fonts, check Creative Fabrica’s freebie section or DaFont’s vintage category.
   - question: How do I make modern fonts look vintage in my junk journal?
     answer: Apply a sepia or cream color overlay, reduce opacity to 70–80%, add a subtle paper texture, and use a slight blur (1–2 px) for a printed-on-vintage-paper effect. You can also print on tea-stained paper before cutting and adhering.
+image: https://i.ibb.co/W47Pz6dT/site3-2026-07-07-top-7-font-pairings-vintage-junk-journal-clipart-cover.jpg
 ---
+
+![Vintage junk journal spread with botanical clipart and Victorian script font pairing](https://i.ibb.co/W47Pz6dT/site3-2026-07-07-top-7-font-pairings-vintage-junk-journal-clipart-cover.jpg)
 
 You’ve spent hours curating the perfect vintage clipart — sepia-toned botanical engravings, delicate Victorian frames, and worn ledger lines. But when you add text, something feels off. The font clashes with the ephemera. The script looks too modern. The serif feels too heavy.
 

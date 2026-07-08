@@ -24,7 +24,10 @@ faq:
     answer: Absolutely. Planner stickers with transparent backgrounds work identically to clipart. The Ghost Layer and Stamp Effect are especially effective with sticker-sized elements.
   - question: Can I combine multiple techniques in one spread?
     answer: Yes. For example, use the Ghost Layer for your main background, then add a Stamp Effect border. Just keep the overall opacity balanced so the spread doesn't look muddy.
+image: https://i.ibb.co/mCSyJ0H2/site3-2026-07-07-unexpected-ways-transform-junk-journal-backgrounds-single-cl-cover.jpg
 ---
+
+![Close-up junk journal spread with layered vintage botanical clipart background](https://i.ibb.co/mCSyJ0H2/site3-2026-07-07-unexpected-ways-transform-junk-journal-backgrounds-single-cl-cover.jpg)
 
 You've probably done it. You find a beautiful vintage clipart piece — a botanical engraving, a faded postcard, or an ornate frame — and you drop it onto your junk journal spread. It looks nice. But it's just one element on a page.
 
