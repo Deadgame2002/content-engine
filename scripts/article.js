@@ -156,24 +156,47 @@ Choose a specific narrow angle — not a generic overview. Language: English.`;
   const raw = data.choices?.[0]?.message?.content;
   if (!raw) throw new Error("DeepSeek вернул пустой ответ");
 
-  // Чистим возможные markdown-обёртки ```json ... ```
-  const cleaned = raw.replace(/```json|```/g, "").trim();
+  return parseDeepSeekJson(raw);
+}
 
-  let parsed;
+/**
+ * Надёжный парсер JSON из ответа DeepSeek.
+ * Справляется с: markdown-обёртками, текстом до/после JSON,
+ * и невалидными управляющими символами (главная причина ошибки "Bad control character").
+ */
+function parseDeepSeekJson(raw) {
+  // 1. Убираем markdown-обёртки ```json ... ```
+  let cleaned = raw.replace(/```json|```/g, "").trim();
+
+  // 2. Вырезаем только JSON-объект (на случай если DeepSeek добавил текст до/после)
+  const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error(`JSON-объект не найден в ответе: ${cleaned.slice(0, 200)}`);
+  cleaned = jsonMatch[0];
+
+  // 3. Пробуем парсить как есть
   try {
-    parsed = JSON.parse(cleaned);
-  } catch {
-    // DeepSeek иногда добавляет текст до/после JSON — вырезаем JSON-объект
-    const match = cleaned.match(/\{[\s\S]*\}/);
-    if (!match) throw new Error(`Невалидный JSON от DeepSeek: ${cleaned.slice(0, 300)}`);
-    try {
-      parsed = JSON.parse(match[0]);
-    } catch (e2) {
-      throw new Error(`Не удалось распарсить JSON: ${e2.message}`);
-    }
-  }
+    return JSON.parse(cleaned);
+  } catch {}
 
-  return parsed;
+  // 4. Исправляем невалидные управляющие символы внутри JSON-строк.
+  // "Bad control character" возникает когда DeepSeek вставляет буквальный \n или \t
+  // внутри JSON-строки вместо экранированных \\n и \\t.
+  // Заменяем их только внутри строковых значений (между кавычками).
+  const fixed = cleaned.replace(
+    /"((?:[^"\\]|\\[\s\S])*)"/g,
+    (match) => {
+      return match
+        .replace(/\n/g, "\\n")
+        .replace(/\r/g, "\\r")
+        .replace(/\t/g, "\\t");
+    }
+  );
+
+  try {
+    return JSON.parse(fixed);
+  } catch (e) {
+    throw new Error(`Не удалось распарсить JSON от DeepSeek: ${e.message}\nФрагмент: ${cleaned.slice(0, 300)}`);
+  }
 }
 
 /**
@@ -228,15 +251,5 @@ RESPOND ONLY with valid raw JSON, no markdown fences:
   const raw = data.choices?.[0]?.message?.content;
   if (!raw) throw new Error("DeepSeek вернул пустой ответ (refresh)");
 
-  const cleaned = raw.replace(/```json|```/g, "").trim();
-  let parsed;
-  try {
-    parsed = JSON.parse(cleaned);
-  } catch {
-    const match = cleaned.match(/\{[\s\S]*\}/);
-    if (!match) throw new Error(`Невалидный JSON (refresh): ${cleaned.slice(0, 300)}`);
-    parsed = JSON.parse(match[0]);
-  }
-
-  return parsed;
+  return parseDeepSeekJson(raw);
 }
