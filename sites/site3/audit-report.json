@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-07-08T07:50:55.039Z",
+  "stats": {
+    "total": 21,
+    "ok": 21,
+    "missing_image": 5,
+    "missing_faq": 1,
+    "missing_meta": 1,
+    "bad_yaml": 0,
+    "empty_body": 0
+  },
+  "issues": [],
+  "warnings": [
+    "⚠️ Нет или слишком короткая meta_description: 2026-06-23-vintage-junk-journal-spread-printables.md",
+    "⚠️ Нет FAQ: 2026-06-23-vintage-junk-journal-spread-printables.md",
+    "⚠️ Нет обложки (image): 2026-07-06-7-common-junk-journal-clipart-mistakes-vintage-spreads-fixes.md",
+    "⚠️ Нет обложки (image): 2026-07-06-mix-clipart-styles-cohesive-junk-journal-spreads.md",
+    "⚠️ Нет обложки (image): 2026-07-06-png-clipart-vs-svg-files-junk-journaling-comparison.md",
+    "⚠️ Нет обложки (image): 2026-07-07-top-7-font-pairings-vintage-junk-journal-clipart.md",
+    "⚠️ Нет обложки (image): 2026-07-07-unexpected-ways-transform-junk-journal-backgrounds-single-cl.md"
+  ]
+}

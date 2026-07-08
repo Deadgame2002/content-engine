@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-07-08T07:50:55.039Z",
+  "stats": {
+    "total": 23,
+    "ok": 23,
+    "missing_image": 5,
+    "missing_faq": 1,
+    "missing_meta": 1,
+    "bad_yaml": 0,
+    "empty_body": 0
+  },
+  "issues": [],
+  "warnings": [
+    "⚠️ Нет или слишком короткая meta_description: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
+    "⚠️ Нет FAQ: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
+    "⚠️ Нет обложки (image): 2026-07-06-7-stunning-cricut-svg-ornament-ideas-farmhouse-christmas-boh.md",
+    "⚠️ Нет обложки (image): 2026-07-06-svg-font-distortion-mistakes-cricut-design-space-fixes.md",
+    "⚠️ Нет обложки (image): 2026-07-06-top-8-must-have-svg-cut-files-for-cricut-tumblers.md",
+    "⚠️ Нет обложки (image): 2026-07-07-choose-svg-cut-file-3d-paper-flowers-cricut-guide.md",
+    "⚠️ Нет обложки (image): 2026-07-07-top-7-cricut-fonts-for-stunning-baby-shower-gifts.md"
+  ]
+}
