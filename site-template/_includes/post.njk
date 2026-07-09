@@ -2,18 +2,84 @@
 layout: base.njk
 ---
 <article>
-  {% if image %}
-  <img class="cover" src="{{ image }}" alt="{{ image_alt or title }}">
-  {% endif %}
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <span>{{ title }}</span>
+  </nav>
+
   <h1>{{ title }}</h1>
-  <p class="meta">{{ date | isoDate }}</p>
+
+  <div class="byline">
+    <span class="chip">📅 {{ date | readableDate }}</span>
+    <span class="chip">⏱️ {{ content | readingTime }} min read</span>
+    <span class="chip">✍️ {{ site.site_name }}</span>
+  </div>
+
+  {% if image %}
+  <img class="cover" src="{{ image }}" alt="{{ image_alt or title }}" width="1200" height="675">
+  {% endif %}
+
   {{ content | safe }}
+
+  {% if keywords and keywords.length %}
+  <div class="tags">
+    {% for kw in keywords %}<span class="tag">#{{ kw }}</span>{% endfor %}
+  </div>
+  {% endif %}
+
   <div class="cta-box">
     <strong>Looking for fonts, SVGs or printable designs?</strong>
-    <p style="margin:6px 0 0;color:var(--muted);">Browse thousands of ready-to-use fonts, SVG cut files and craft graphics on Creative Fabrica.</p>
-    <a href="{{ site.ref_link }}" rel="sponsored noopener" target="_blank">Explore Creative Fabrica →</a>
+    <p style="margin:8px 0 0;color:var(--muted);">Browse thousands of ready-to-use fonts, SVG cut files and craft graphics on Creative Fabrica — perfect for your next project.</p>
+    <a class="btn" href="{{ site.ref_link }}" rel="sponsored noopener" target="_blank">Explore Creative Fabrica →</a>
   </div>
 </article>
+
+{% set related = collections.posts | relatedPosts(page.url, 3) %}
+{% if related.length %}
+<section class="related">
+  <h2 class="section-title">Keep reading</h2>
+  <div class="post-grid">
+    {% for post in related %}
+    <div class="post-card">
+      {% if post.data.image %}
+      <a class="thumb" href="{{ post.url }}"><img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}" loading="lazy"></a>
+      {% endif %}
+      <div class="body">
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <p class="excerpt">{{ post.data.excerpt }}</p>
+        <div class="meta"><span>{{ post.date | readableDate }}</span><a class="read-more" href="{{ post.url }}">Read →</a></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.base_url }}{{ page.url }}" },
+  "headline": {{ title | dump | safe }},
+  "description": {{ (meta_description or excerpt) | dump | safe }},
+  {% if image %}"image": {{ image | dump | safe }},{% endif %}
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ date | isoDate }}",
+  "author": { "@type": "Organization", "name": {{ site.site_name | dump | safe }}, "url": "{{ site.base_url }}/" },
+  "publisher": { "@id": "{{ site.base_url }}/#organization", "@type": "Organization", "name": {{ site.site_name | dump | safe }} }
+  {% if keywords and keywords.length %},"keywords": {{ keywords | join(", ") | dump | safe }}{% endif %}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.base_url }}/" },
+    { "@type": "ListItem", "position": 2, "name": {{ title | dump | safe }}, "item": "{{ site.base_url }}{{ page.url }}" }
+  ]
+}
+</script>
 
 {% if faq %}
 <script type="application/ld+json">

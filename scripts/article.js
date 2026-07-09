@@ -87,14 +87,18 @@ Writing for: ${targetAudience || "craft enthusiasts of all skill levels"}.
 Tone: ${tone || "friendly, practical, like an experienced crafter friend"}.
 Writing style: ${writingStyle || "clear, conversational, specific — not generic advice"}.
 
-REQUIREMENTS — follow ALL of these:
+SEO REQUIREMENTS — follow ALL of these:
 - Article type: ${articleType}
 - Length: 1600-2200 words — thorough and genuinely useful, not padded
-- Structure: minimum 6 H2 sections (##). At least 3 of them must have H3 subsections (###) inside. Headings must be SPECIFIC ("How to Fix Vinyl Bleeding on Dark Shirts" not "More Tips")
-- Use real specifics: tool names, temperatures, measurements, step numbers — NOT vague phrases like "choose the right option"
-- Include a markdown comparison TABLE where it makes sense
-- Near the end, naturally mention Creative Fabrica with a markdown link: [descriptive text](${refLink})
-- End with 4-5 FAQ questions people actually ask about this topic
+- Pick ONE primary keyword (a real phrase people search) and build the article around it. Put it in the title, the meta description, the first sentence, and at least one H2 — used NATURALLY, never keyword-stuffed. Weave in 3-5 related/semantic terms too.
+- TITLE: 50-60 characters, front-load the primary keyword, promise a clear benefit or use a number. Compelling but not clickbait.
+- OPENING: the first paragraph (40-60 words) must directly answer the core question / state the key takeaway right away — this wins Google featured snippets. No long throat-clearing intro.
+- Right after the intro, add a short "## Key Takeaways" section with 3-5 concise bullet points summarizing the article (great for snippets and skimmers).
+- Structure: minimum 6 H2 sections (##). At least 3 of them must have H3 subsections (###) inside. Headings must be SPECIFIC and descriptive ("How to Fix Vinyl Bleeding on Dark Shirts" not "More Tips"). Phrase some headings as real questions people ask.
+- Use real specifics: tool names, temperatures, measurements, step numbers, numbered steps — NOT vague phrases like "choose the right option".
+- Include at least one bulleted or numbered list, and a markdown comparison TABLE where it makes sense (tables win featured snippets).
+- Near the end, naturally mention Creative Fabrica with a markdown link: [descriptive text](${refLink}).
+- End with 4-5 FAQ questions people actually ask about this topic, with concise, direct answers (2-4 sentences each).
 ${keywordHint}
 ${avoidHint}
 ${internalHint}
@@ -109,9 +113,9 @@ IMAGE PROMPTS RULES (critical — follow exactly):
 
 RESPOND ONLY with valid raw JSON — no markdown fences, no explanation, no preamble:
 {
-  "title": "specific title with number or clear benefit",
+  "title": "50-60 char title, primary keyword first, clear benefit or number",
   "slug": "url-slug-latin-hyphens-only",
-  "meta_description": "120-155 chars, keyword first",
+  "meta_description": "120-155 chars, primary keyword first, one benefit + soft call to action",
   "excerpt": "1-2 sentence summary for homepage card",
   "body_markdown": "full article, NO h1 at top, NO faq section here, with ## and ### headings, lists, table",
   "faq": [
@@ -208,7 +212,12 @@ export async function refreshArticle({ title, oldBodyMarkdown, niche, tone, writ
   if (!apiKey) throw new Error("Не задан DEEPSEEK_API_KEY");
 
   const systemPrompt = `You are an expert SEO editor. Improve this blog article from the niche "${niche}".
-Make it more detailed, specific, and useful. Improve heading structure (## and ###). Keep the same title and topic.
+Make it more detailed, specific, and useful. Keep the same title and topic (URL must not change).
+Improvements to apply:
+- Front-load the primary keyword in the first sentence and answer the core question within the first 40-60 words.
+- Add a short "## Key Takeaways" section (3-5 bullets) right after the intro if missing.
+- Improve heading structure (## and ###); make headings specific and phrase some as real questions.
+- Add concrete specifics (numbers, steps, tool names) and at least one list and a comparison table where it fits.
 Tone: ${tone || "friendly, practical"}. Style: ${writingStyle || "clear and informative"}.
 Target length: 1600-2000 words.
 RESPOND ONLY with valid raw JSON, no markdown fences:
