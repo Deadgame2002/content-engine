@@ -94,7 +94,7 @@ If the license says "personal use only," do not sell products made with that cli
 
 By avoiding these five mistakes, you’ll transform your scrapbooking layouts from amateur to stunning. Start with the resolution check, then move on to color harmony and layering. Your junk journals and planner pages will thank you.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the minimum resolution for scrapbooking clipart to print cleanly?
 

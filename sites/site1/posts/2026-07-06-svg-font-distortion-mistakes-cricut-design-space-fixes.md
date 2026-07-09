@@ -166,7 +166,7 @@ Now go make something awesome. And if you run into a new issue, drop a comment. 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my SVG font look pixelated in Cricut Design Space?
 

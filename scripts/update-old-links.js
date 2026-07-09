@@ -43,8 +43,10 @@ function updatePost(site, postPath, filename) {
   }
 
   // Если в статье есть блок FAQ — вставляем баннеры ПЕРЕД ним, иначе просто в конец файла
-  const faqMarker = "\n## Часто задаваемые вопросы";
-  if (content.includes(faqMarker)) {
+  // Поддерживаем и новый английский заголовок, и старый русский (для ранее сгенерированных статей)
+  const faqMarkers = ["\n## Frequently Asked Questions", "\n## Часто задаваемые вопросы"];
+  const faqMarker = faqMarkers.find((m) => content.includes(m));
+  if (faqMarker) {
     content = content.replace(faqMarker, `${bannersHtml}${faqMarker}`);
   } else {
     content = content + bannersHtml;

@@ -239,7 +239,7 @@ I hear these questions all the time in Facebook groups. Let me answer them.
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can Cricut Design Space cut PNG files?
 

@@ -187,7 +187,7 @@ Creating a vintage junk journal spread with printable ephemera is all about inte
 
 Remember, every spread is a journey. Embrace imperfections—they add character. Happy journaling!
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What type of paper should I use for printing vintage ephemera?
 

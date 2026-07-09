@@ -197,7 +197,7 @@ A: Regular paper is too thin and will curl or tear. Stick to cardstock for clean
 **Q: Do I need a special blade for layered paper?**
 A: The Fine-Point Blade (standard for Cricut Maker and Explore) works perfectly. For very intricate cuts, use a new blade or the Premium Fine-Point Blade.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What paper weight is best for layered paper art?
 

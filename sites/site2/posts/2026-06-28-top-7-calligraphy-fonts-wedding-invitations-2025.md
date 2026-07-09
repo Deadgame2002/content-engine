@@ -151,7 +151,7 @@ Your wedding invitations are the first glimpse guests get of your big day. By ch
 
 In a future article, we'll explore how to use **SVG cut files to create layered invitation embellishments** for Cricut — stay tuned!
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use free calligraphy fonts for commercial wedding invitations?
 

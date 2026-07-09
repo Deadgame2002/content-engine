@@ -95,7 +95,7 @@ If you're ready to start your project with confidence, browse the curated select
 
 In a future article, we'll dive deeper into how to install and use OpenType features like stylistic alternates and ligatures in Cricut Design Space—a game-changer for custom wedding decor.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use any free calligraphy font for my wedding invitations if I'm selling them?
 

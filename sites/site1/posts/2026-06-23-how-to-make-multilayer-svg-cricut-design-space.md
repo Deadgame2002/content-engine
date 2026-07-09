@@ -121,7 +121,7 @@ Now that you know the technique, you can apply it to any design—whether it's a
 
 In a future article, we'll cover how to create multi-layer SVGs from **photos** (like silhouettes) using the same offset technique—perfect for personalized gifts.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I make a multi-layer SVG with more than 3 layers in Design Space?
 

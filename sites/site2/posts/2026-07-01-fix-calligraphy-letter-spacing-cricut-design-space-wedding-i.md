@@ -207,7 +207,7 @@ In a future article, I will cover how to match calligraphy font weights with dif
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my calligraphy font look spaced out in Cricut Design Space?
 

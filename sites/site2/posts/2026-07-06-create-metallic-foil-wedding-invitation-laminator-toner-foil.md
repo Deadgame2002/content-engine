@@ -188,7 +188,7 @@ In a future article, we will explore how to combine toner foiling with heat tran
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use an inkjet printer for toner-based foiling?
 

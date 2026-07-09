@@ -155,7 +155,7 @@ If you are still curious about related topics, consider exploring how different 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use a calligraphy font for hand-lettering practice?
 

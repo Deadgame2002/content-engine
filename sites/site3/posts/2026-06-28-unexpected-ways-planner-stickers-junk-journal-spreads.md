@@ -168,7 +168,7 @@ Planner stickers are a microcosm of design potential. The next time you open a s
 
 In a future article, I'll explore how to combine planner stickers with vinyl cut files to create layered dimensional elements—imagine a planner sticker rose layered over a cut-out script word. That technique opens up even more possibilities for texture and contrast.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use planner stickers on any type of paper in a junk journal?
 

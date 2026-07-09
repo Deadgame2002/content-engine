@@ -318,7 +318,7 @@ Just clean, professional designs that pop.
 
 Happy crafting!
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I layer script fonts in Cricut Design Space without a subscription?
 

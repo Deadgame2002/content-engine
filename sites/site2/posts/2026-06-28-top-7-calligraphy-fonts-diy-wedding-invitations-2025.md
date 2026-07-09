@@ -211,7 +211,7 @@ It is risky. If you must, choose one ornate script (like Great Vibes) and one si
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use a free calligraphy font for my wedding invitations?
 

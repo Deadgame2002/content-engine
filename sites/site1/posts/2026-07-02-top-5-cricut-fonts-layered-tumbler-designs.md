@@ -231,7 +231,7 @@ Happy crafting!
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use any script font for layered tumblers?
 

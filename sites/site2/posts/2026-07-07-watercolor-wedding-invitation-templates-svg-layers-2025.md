@@ -280,7 +280,7 @@ Give yourself at least 8-12 weeks. Designing, printing, cutting, assembling, and
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use watercolor wedding invitation templates without a Cricut machine?
 

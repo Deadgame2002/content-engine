@@ -138,7 +138,7 @@ In a future article, we will explore how to layer multiple SVG elements with cal
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use two different calligraphy fonts on the same invitation?
 

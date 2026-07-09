@@ -183,7 +183,7 @@ In a future article, we’ll explore how to create your own custom digital paper
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use this zero-waste method with free printable ephemera that has white backgrounds?
 

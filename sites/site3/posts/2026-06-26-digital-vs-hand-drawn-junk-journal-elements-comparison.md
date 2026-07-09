@@ -156,7 +156,7 @@ Print on textured or tea-stained paper, add a 'Gaussian Blur' or 'Noise' filter 
 ### Is it cheaper to buy a clipart subscription or individual sets?
 If you make more than 3–4 journals per month, a subscription (like Creative Fabrica's) is cheaper. If you only make one journal every few months, buying individual sets ($3–$10 each) is more cost-effective.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What resolution should I print digital clipart at for a junk journal?
 

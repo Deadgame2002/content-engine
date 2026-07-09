@@ -236,7 +236,7 @@ Your Cricut is a money-making machine. SVG cut files are the fuel. Start today.
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best SVG type for layered projects on Cricut?
 

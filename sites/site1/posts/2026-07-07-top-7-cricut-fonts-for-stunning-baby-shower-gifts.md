@@ -237,7 +237,7 @@ Happy crafting!
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use free fonts from Google Fonts for Cricut baby shower projects?
 

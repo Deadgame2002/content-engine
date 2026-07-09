@@ -119,7 +119,7 @@ If you found the workflow comparison helpful, you might also enjoy a deep dive i
 
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use Inkscape SVG files directly in Cricut Design Space?
 

@@ -216,7 +216,7 @@ P.S. Want to know more about choosing the perfect font weight for your vinyl pro
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my layered vinyl have gaps between letters after transfer?
 

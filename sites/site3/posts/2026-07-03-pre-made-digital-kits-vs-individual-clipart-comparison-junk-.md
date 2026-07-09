@@ -206,7 +206,7 @@ Whichever route you choose, the real win is creating something beautiful with yo
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use individual clipart files from different artists in one spread without it looking messy?
 

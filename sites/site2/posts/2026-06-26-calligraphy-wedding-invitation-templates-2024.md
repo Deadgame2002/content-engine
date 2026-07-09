@@ -118,7 +118,7 @@ In a future article, we'll dive deeper into **how to choose the perfect calligra
 
 Now it's your turn. Pick one of these templates, gather your favorite SVG elements, and start designing an invitation that feels authentically you.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best calligraphy font for wedding invitations?
 

@@ -196,7 +196,7 @@ Remember: the goal isn’t to use more stickers. It’s to use each sticker with
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use any type of planner sticker for these layering techniques?
 

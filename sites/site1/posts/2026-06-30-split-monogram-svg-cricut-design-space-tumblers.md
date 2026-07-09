@@ -155,7 +155,7 @@ Happy crafting!
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I make a split monogram SVG without welding?
 

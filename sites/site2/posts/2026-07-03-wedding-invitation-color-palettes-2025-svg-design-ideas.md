@@ -150,7 +150,7 @@ For those of you wondering how to master the technical side of layering these el
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### How do I choose a calligraphy font that pairs well with my wedding color palette?
 

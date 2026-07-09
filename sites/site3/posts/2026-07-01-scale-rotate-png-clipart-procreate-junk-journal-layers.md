@@ -223,7 +223,7 @@ In a future article, we'll explore how to combine scaled and rotated clipart wit
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What's the best way to scale clipart without losing quality in Procreate?
 

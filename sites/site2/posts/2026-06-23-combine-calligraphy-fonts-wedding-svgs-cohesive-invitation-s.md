@@ -71,7 +71,7 @@ Ultimately, your wedding invitation suite should reflect you and your partner. W
 
 By thoughtfully combining calligraphy fonts and wedding SVGs, you create an invitation suite that is not just a piece of paper, but a prelude to your celebration. With these strategies, you can achieve a cohesive, elegant, and deeply personal design that sets the tone for your special day.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### How do I choose the right calligraphy font for my wedding SVG?
 

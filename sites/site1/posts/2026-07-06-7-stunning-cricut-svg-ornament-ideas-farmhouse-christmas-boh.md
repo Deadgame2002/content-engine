@@ -292,7 +292,7 @@ Happy cutting!
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best font size for Cricut ornaments?
 
