@@ -159,7 +159,7 @@ Layered SVG designs open up endless possibilities for custom t-shirts, tote bags
 
 In an upcoming article, I’ll dive into how to design your own layered SVGs from scratch using free vector software — stay tuned if you want to take full creative control.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Do I need a heat press for layered HTV designs?
 

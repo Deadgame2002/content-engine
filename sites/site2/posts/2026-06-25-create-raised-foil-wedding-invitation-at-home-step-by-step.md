@@ -104,7 +104,7 @@ Raised foil wedding invitations are no longer reserved for large budgets. With a
 
 In a future article, we'll explore how to combine foil with letterpress simulation using SVG cut files — a technique that adds even more dimension to your paper goods.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use an inkjet printer for foil invitations?
 

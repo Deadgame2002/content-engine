@@ -132,7 +132,7 @@ This same process works for place cards, table numbers, and even cake toppers. J
 
 Remember, the perfect script font is the one that makes the couple’s eyes light up. So take your time, test different options, and have fun with it. Your Cricut is a magic wand, and the right font is the spell that brings wedding dreams to life.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best script font for Cricut wedding invitations?
 

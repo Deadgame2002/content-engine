@@ -144,7 +144,7 @@ Building a personal library of vintage clipart takes hours of scanning and clean
 
 In a future article, I’ll show you how to color-match clipart from different sources so they feel like they belong to the same era—a trick that instantly elevates any junk journal spread.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best paper to print vintage ephemera clipart on for junk journals?
 

@@ -146,7 +146,7 @@ Your wedding invitation is the first chapter of your love story. Choosing the ri
 
 In a future article, we'll dive into how to combine calligraphy fonts with SVG floral borders for a complete invitation suite—so stay tuned!
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best calligraphy font for wedding invitations that is easy to read?
 

@@ -192,7 +192,7 @@ What's your biggest struggle when mixing clipart styles? Drop a comment below—
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I mix clipart from free and paid sources in the same spread?
 

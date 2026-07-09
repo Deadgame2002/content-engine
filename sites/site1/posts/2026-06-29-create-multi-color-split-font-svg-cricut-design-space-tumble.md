@@ -194,7 +194,7 @@ In a future article, I'll show you how to create a split font with an offset sha
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use a script font for a split font SVG?
 

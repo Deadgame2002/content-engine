@@ -293,7 +293,7 @@ Happy crafting!
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use any SVG file for 3D paper flowers on Cricut?
 

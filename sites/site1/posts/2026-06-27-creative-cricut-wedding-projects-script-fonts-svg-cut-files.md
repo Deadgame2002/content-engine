@@ -136,7 +136,7 @@ Creating custom designs from scratch can be time-consuming. That's where resourc
 - For small script fonts (below 1 inch), reduce the blade pressure to avoid tearing.
 - In future, we could explore how to convert your own handwriting into a script SVG file for truly unique wedding projects.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use any script font with Cricut Design Space?
 

@@ -159,7 +159,7 @@ The debate between heat transfer vinyl and printable paper ultimately comes down
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use a regular iron for heat transfer vinyl on invitations?
 

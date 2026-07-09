@@ -89,7 +89,7 @@ Both Cricut and Silhouette can produce beautiful wedding invitations. Your choic
 
 In a future article, we’ll explore how to choose the perfect calligraphy font for laser-cut wedding invitations—a topic that complements this comparison beautifully.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use Cricut without a subscription for wedding SVGs?
 

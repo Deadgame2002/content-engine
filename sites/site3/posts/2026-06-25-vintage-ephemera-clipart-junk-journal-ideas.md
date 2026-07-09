@@ -164,7 +164,7 @@ Vintage ephemera clipart is incredibly versatile — from simple layering to int
 
 Want to dive deeper into one specific technique? In a future article, we’ll explore how to create custom ephemera packs by combining vintage clipart with digital aging filters in Photoshop.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What paper weight is best for printing vintage ephemera clipart?
 

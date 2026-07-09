@@ -218,7 +218,7 @@ Yes. While you could cut glitter vinyl by hand with scissors, it's nearly imposs
 **Can I combine foiling and glitter vinyl on the same invitation?**  
 Absolutely. Many DIYers foil the main text and add a glitter vinyl border or monogram. Just be sure to apply the foil first, then the vinyl on top, to avoid the foil laminator damaging the vinyl.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use an inkjet printer for foiling?
 

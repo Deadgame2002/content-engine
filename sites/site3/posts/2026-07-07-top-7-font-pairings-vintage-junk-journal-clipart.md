@@ -195,7 +195,7 @@ In a future article, I’ll explore how to create your own custom digital epheme
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### How do I match fonts to clipart that has mixed historical styles?
 

@@ -149,7 +149,7 @@ Check the product description or file format list. Most marketplaces clearly lab
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I convert a transparent PNG into a layered SVG?
 

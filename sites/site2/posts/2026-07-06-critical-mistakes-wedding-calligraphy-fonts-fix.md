@@ -147,7 +147,7 @@ In a future article, I plan to explore how to combine calligraphy fonts with SVG
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my calligraphy font look broken when I cut it on Cricut?
 

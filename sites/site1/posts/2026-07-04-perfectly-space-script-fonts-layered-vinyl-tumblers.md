@@ -237,7 +237,7 @@ In a future article, we’ll explore how to space script fonts for layered t-shi
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### How do I fix overlapping letters in a script font for vinyl?
 

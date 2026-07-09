@@ -157,7 +157,7 @@ Start small. Experiment with one technique per spread. You'll soon find that you
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use these techniques if I don't have advanced editing software?
 

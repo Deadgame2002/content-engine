@@ -59,7 +59,7 @@ You don’t have to choose one exclusively. Many professional scrapbookers use d
 
 Both hand-drawn and digital clipart have their place in scrapbooking. Hand-drawn wins for authenticity and one-of-a-kind projects; digital wins for speed, cost, and customization. Assess your project: a single art journal page might benefit from hand-drawn, but a year-long planner or a batch of 20 junk journals demands digital efficiency. Start with a digital bundle from a trusted source, and don’t be afraid to add your own handmade touches.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use digital clipart for commercial products like selling junk journals?
 

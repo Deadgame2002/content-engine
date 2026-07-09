@@ -219,7 +219,7 @@ Got a tumbler SVG you swear by? Share it in the comments. I’m always looking f
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use the same SVG for different tumbler sizes?
 

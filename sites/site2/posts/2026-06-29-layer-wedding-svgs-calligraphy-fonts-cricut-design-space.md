@@ -172,7 +172,7 @@ Ultimately, the ability to layer SVGs and calligraphy fonts is a superpower in t
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my calligraphy font look pixelated after I weld it to an SVG?
 

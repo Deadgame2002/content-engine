@@ -194,7 +194,7 @@ A future article could explore how to mix clipart from different designers into 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best DPI for printing junk journal clipart?
 

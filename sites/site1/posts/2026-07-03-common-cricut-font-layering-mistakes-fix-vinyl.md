@@ -324,7 +324,7 @@ Technically yes, but it gets less sticky each time. For best results, use fresh 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Why does my layered vinyl keep peeling off?
 

@@ -204,7 +204,7 @@ Procreate can import SVG files, but it flattens them into a single layer and onl
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I convert PNG to SVG myself?
 

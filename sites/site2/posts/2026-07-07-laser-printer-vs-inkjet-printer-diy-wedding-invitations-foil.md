@@ -196,7 +196,7 @@ In general, inkjet printers produce more vibrant colors and smoother gradients. 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use an inkjet printer for toner foiling?
 

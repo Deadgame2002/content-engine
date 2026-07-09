@@ -182,7 +182,7 @@ Age the print by lightly spritzing it with brewed black tea or coffee, then let 
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### Can I use these clipart elements for commercial projects like selling junk journals?
 

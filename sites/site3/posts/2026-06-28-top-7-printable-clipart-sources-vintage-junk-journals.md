@@ -145,7 +145,7 @@ If you’re looking for a single place to start with a massive library of high-q
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best free source for vintage clipart for junk journals?
 

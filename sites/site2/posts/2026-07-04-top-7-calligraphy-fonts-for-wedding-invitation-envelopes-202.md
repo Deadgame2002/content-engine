@@ -170,7 +170,7 @@ Yes, but use one font for the guest name and a simpler, complementary font for t
 </div>
 
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
 ### What is the best font size for wedding invitation envelopes?
 
