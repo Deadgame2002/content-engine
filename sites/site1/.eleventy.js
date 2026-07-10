@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("ads.txt");  // ← добавь эту строку
   eleventyConfig.addPassthroughCopy("_headers");
 
   eleventyConfig.addFilter("isoDate", function (date) {
