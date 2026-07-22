@@ -21,7 +21,10 @@ faq:
     answer: Use a high-quality inkjet printer with pigment inks and set the paper type to Photo Paper or Fine Art Paper. Print on watercolor cardstock (300 gsm) for the best texture absorption.
   - question: Can I sell invitations made from watercolor SVG templates?
     answer: Only if the template's license allows commercial use. Most Creative Fabrica templates include a standard commercial license, but always read the terms. Some designers restrict the number of sales or require attribution.
+image: https://i.ibb.co/YFg3qXVK/site2-2026-07-22-watercolor-wedding-invitation-templates-svg-layers-2025-2-cover.jpg
 ---
+
+![Watercolor floral wedding invitation flat lay with gold foil accents on white table](https://i.ibb.co/YFg3qXVK/site2-2026-07-22-watercolor-wedding-invitation-templates-svg-layers-2025-2-cover.jpg)
 
 Watercolor wedding invitation templates with SVG layers are the secret to creating a hand-painted look without hiring an artist or spending hours with a brush. In 2025, these editable designs let you customize colors, swap fonts, and resize elements while keeping that dreamy, soft-wash aesthetic brides love. Whether you're planning a rustic barn celebration or a coastal elopement, SVG layers give you full control over every petal and stroke.
 

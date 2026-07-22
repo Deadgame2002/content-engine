@@ -23,7 +23,10 @@ faq:
     answer: Yes, if the tear is small. Use a tiny dab of clear craft glue (like Beacon's 3-in-1) on the back of the vinyl. Press the torn piece back into place. Let dry 10 minutes. This works for single-letter tears.
   - question: What are the easiest fonts for Cricut beginners to weed?
     answer: Thick, bold, sans-serif fonts like Bebas Neue, Oswald, Montserrat, and Playfair Display. For scripts, try Mistral or Great Vibes — they have moderate stroke variation and open counters.
+image: https://i.ibb.co/99Qcs7pZ/site1-2026-07-22-cricut-vinyl-weeding-mistakes-ruin-fonts-fixed-cover.jpg
 ---
+
+![Crafter using weeding tool on light box with vinyl](https://i.ibb.co/99Qcs7pZ/site1-2026-07-22-cricut-vinyl-weeding-mistakes-ruin-fonts-fixed-cover.jpg)
 
 You carefully chose the perfect font. You loaded your Cricut. You hit "Make It." Then you start weeding — and poof — that delicate serif tears. The center of your "o" comes up with the backing. You have to start over.
 

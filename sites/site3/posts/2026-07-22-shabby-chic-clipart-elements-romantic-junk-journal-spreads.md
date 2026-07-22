@@ -23,7 +23,10 @@ faq:
     answer: Yes, but keep the modern elements minimal — a clean sans-serif font for a date stamp or a solid color washi tape strip. Too many modern shapes will clash with the soft vintage vibe.
   - question: How many clipart elements should I use on one page?
     answer: Stick to 4-7 elements for a balanced spread. More than seven creates visual clutter unless you're making a collage-style page where elements overlap heavily.
+image: https://i.ibb.co/39S4LP4C/site3-2026-07-22-shabby-chic-clipart-elements-romantic-junk-journal-spreads-cover.jpg
 ---
+
+![junk journal spread with pink rose clipart and lace borders](https://i.ibb.co/39S4LP4C/site3-2026-07-22-shabby-chic-clipart-elements-romantic-junk-journal-spreads-cover.jpg)
 
 ## The 7 Shabby Chic Clipart Elements You Need for Romantic Junk Journal Spreads Right Now
 
