@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-07-22T20:54:38.313Z",
+  "timestamp": "2026-07-23T20:50:38.604Z",
   "stats": {
-    "total": 37,
-    "ok": 37,
-    "missing_image": 1,
+    "total": 38,
+    "ok": 38,
+    "missing_image": 0,
     "missing_faq": 1,
     "missing_meta": 1,
     "bad_yaml": 0,
@@ -12,7 +12,6 @@
   "issues": [],
   "warnings": [
     "⚠️ Нет или слишком короткая meta_description: 2026-06-23-mix-calligraphy-fonts-svg-wedding-suite.md",
-    "⚠️ Нет FAQ: 2026-06-23-mix-calligraphy-fonts-svg-wedding-suite.md",
-    "⚠️ Нет обложки (image): 2026-07-22-watercolor-wedding-invitation-templates-svg-layers-2025-2.md"
+    "⚠️ Нет FAQ: 2026-06-23-mix-calligraphy-fonts-svg-wedding-suite.md"
   ]
 }

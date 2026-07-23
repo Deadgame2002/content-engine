@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-07-22T20:54:38.313Z",
+  "timestamp": "2026-07-23T20:50:38.604Z",
   "stats": {
-    "total": 39,
-    "ok": 39,
-    "missing_image": 1,
+    "total": 40,
+    "ok": 40,
+    "missing_image": 0,
     "missing_faq": 1,
     "missing_meta": 1,
     "bad_yaml": 0,
@@ -12,7 +12,6 @@
   "issues": [],
   "warnings": [
     "⚠️ Нет или слишком короткая meta_description: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
-    "⚠️ Нет FAQ: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
-    "⚠️ Нет обложки (image): 2026-07-22-cricut-vinyl-weeding-mistakes-ruin-fonts-fixed.md"
+    "⚠️ Нет FAQ: 2026-06-23-perfect-cricut-font-layered-vinyl.md"
   ]
 }
