@@ -8,7 +8,9 @@ eleventyExcludeFromCollections: true
   <url><loc>{{ site.base_url }}/about/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>{{ site.base_url }}/contact/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>{{ site.base_url }}/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>{{ site.base_url }}/terms-of-service/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>{{ site.base_url }}/affiliate-disclosure/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   {% for post in collections.posts %}<url><loc>{{ site.base_url }}{{ post.url }}</loc><lastmod>{{ post.date | isoDate }}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   {% endfor %}
 </urlset>
+
