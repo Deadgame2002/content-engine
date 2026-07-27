@@ -10,4 +10,4 @@ ezoic.ai, bf7d34df355c97eb05daf793cb315cc5, DIRECT
 google.com, pub-6644558441501035, DIRECT, f08c47fec0942fa0
 google.com, pub-1175987143200523, RESELLER, f08c47fec0942fa0
  
-https://srv.adstxtmanager.com/19390/wherefontlive.xyz
+
