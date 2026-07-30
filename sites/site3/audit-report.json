@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-07-29T20:42:04.974Z",
+  "timestamp": "2026-07-30T20:54:59.840Z",
   "stats": {
-    "total": 40,
-    "ok": 40,
+    "total": 41,
+    "ok": 41,
     "missing_image": 0,
     "missing_faq": 1,
     "missing_meta": 1,
