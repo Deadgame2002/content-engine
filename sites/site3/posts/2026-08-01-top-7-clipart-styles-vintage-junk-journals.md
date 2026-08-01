@@ -7,7 +7,10 @@ excerpt: Discover the 7 best clipart styles for vintage junk journals, with tips
 meta_description: Top 7 clipart styles for vintage junk journals — from sepia botanicals to ledger paper. Learn which styles add authentic aged charm to your spreads.
 image_alt: Top 7 Clipart Styles for Vintage Junk Journals
 keywords: []
+image: https://i.ibb.co/3Y7xc7mB/site3-2026-08-01-top-7-clipart-styles-vintage-junk-journals-cover.jpg
 ---
+
+![Top 7 Clipart Styles for Vintage Junk Journals](https://i.ibb.co/3Y7xc7mB/site3-2026-08-01-top-7-clipart-styles-vintage-junk-journals-cover.jpg)
 
 When you're building a vintage junk journal, the clipart you choose can make or break that aged, romantic vibe. **Top 7 clipart styles for vintage junk journals**—sepia botanicals, Victorian frames, ledger paper backgrounds, antique keys, French postcards, shabby florals, and typewriter ephemera—each bring a distinct texture and era to your pages. In this guide, I'll walk you through each style, how to use it, and where to source high-quality printables.
 
