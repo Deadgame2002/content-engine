@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-08-01T20:39:36.535Z",
+  "timestamp": "2026-08-02T20:42:21.986Z",
   "stats": {
-    "total": 43,
-    "ok": 43,
-    "missing_image": 1,
+    "total": 44,
+    "ok": 44,
+    "missing_image": 0,
     "missing_faq": 2,
     "missing_meta": 1,
     "bad_yaml": 0,
@@ -13,7 +13,6 @@
   "warnings": [
     "⚠️ Нет или слишком короткая meta_description: 2026-06-23-vintage-junk-journal-spread-printables.md",
     "⚠️ Нет FAQ: 2026-06-23-vintage-junk-journal-spread-printables.md",
-    "⚠️ Нет обложки (image): 2026-08-01-top-7-clipart-styles-vintage-junk-journals.md",
     "⚠️ Нет FAQ: 2026-08-01-top-7-clipart-styles-vintage-junk-journals.md"
   ]
 }
