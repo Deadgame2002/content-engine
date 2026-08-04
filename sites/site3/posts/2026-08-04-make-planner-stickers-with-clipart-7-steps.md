@@ -7,7 +7,10 @@ excerpt: Turn any clipart into custom planner stickers in 7 simple steps. This g
 meta_description: Learn how to make planner stickers with clipart in 7 steps — from choosing transparent PNGs to printing on sticker paper. Get pro tips for crisp, waterproof results.
 image_alt: How to Make Planner Stickers with Clipart in 7 Steps
 keywords: []
+image: https://i.ibb.co/PG2v9F3D/site3-2026-08-04-make-planner-stickers-with-clipart-7-steps-cover.jpg
 ---
+
+![How to Make Planner Stickers with Clipart in 7 Steps](https://i.ibb.co/PG2v9F3D/site3-2026-08-04-make-planner-stickers-with-clipart-7-steps-cover.jpg)
 
 ## Key Takeaways
 
