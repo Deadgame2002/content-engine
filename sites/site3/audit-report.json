@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03T20:54:24.952Z",
+  "timestamp": "2026-08-04T21:01:38.515Z",
   "stats": {
-    "total": 45,
-    "ok": 45,
-    "missing_image": 0,
-    "missing_faq": 2,
+    "total": 46,
+    "ok": 46,
+    "missing_image": 1,
+    "missing_faq": 3,
     "missing_meta": 1,
     "bad_yaml": 0,
     "empty_body": 0
@@ -13,6 +13,8 @@
   "warnings": [
     "⚠️ Нет или слишком короткая meta_description: 2026-06-23-vintage-junk-journal-spread-printables.md",
     "⚠️ Нет FAQ: 2026-06-23-vintage-junk-journal-spread-printables.md",
-    "⚠️ Нет FAQ: 2026-08-01-top-7-clipart-styles-vintage-junk-journals.md"
+    "⚠️ Нет FAQ: 2026-08-01-top-7-clipart-styles-vintage-junk-journals.md",
+    "⚠️ Нет обложки (image): 2026-08-04-make-planner-stickers-with-clipart-7-steps.md",
+    "⚠️ Нет FAQ: 2026-08-04-make-planner-stickers-with-clipart-7-steps.md"
   ]
 }
