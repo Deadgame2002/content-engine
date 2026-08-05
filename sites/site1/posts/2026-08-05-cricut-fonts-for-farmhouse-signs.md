@@ -23,7 +23,10 @@ faq:
     answer: Use a rough-textured font like 'Painted Brush' or 'Vintage Barn' and apply it to a distressed wood plank. You can also sand the edges of the vinyl lightly after application.
   - question: What's the best vinyl for outdoor farmhouse signs?
     answer: Use **permanent outdoor vinyl** like Oracal 751. It's UV-resistant and waterproof, perfect for withstanding the elements.
+image: https://i.ibb.co/Zp9jDSBf/site1-2026-08-05-cricut-fonts-for-farmhouse-signs-cover.jpg
 ---
+
+![Rustic wooden farmhouse sign with vinyl lettering on a porch](https://i.ibb.co/Zp9jDSBf/site1-2026-08-05-cricut-fonts-for-farmhouse-signs-cover.jpg)
 
 Looking for the perfect **Cricut fonts for farmhouse signs**? You're in the right place. The right font can make a simple plank of wood look like a $50 boutique treasure. But with thousands of options in Design Space, it's easy to feel overwhelmed.
 

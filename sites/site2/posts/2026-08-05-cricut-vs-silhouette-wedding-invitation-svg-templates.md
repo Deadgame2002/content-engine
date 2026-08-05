@@ -23,7 +23,10 @@ faq:
     answer: Yes, both machines support foil quill tools. The key is to use foil sheets designed for your machine and adjust the cut settings for the material. Silhouette's adjustable speed gives you more control for fine foil lines, but Cricut also performs well with practice.
   - question: What if I want to make a lot of invitations—which machine is more durable?
     answer: Both machines are built to last, but Silhouette's metal internal gears are more robust for heavy use. Cricut's Maker series is also durable, but some users report that the blade housing wears out faster with frequent cutting of thick materials. If you plan to cut hundreds of invitations, consider a deep-cut blade for either machine.
+image: https://i.ibb.co/KjdsM5pL/site2-2026-08-05-cricut-vs-silhouette-wedding-invitation-svg-templates-cover.jpg
 ---
+
+![Cricut and Silhouette machines on a craft table](https://i.ibb.co/KjdsM5pL/site2-2026-08-05-cricut-vs-silhouette-wedding-invitation-svg-templates-cover.jpg)
 
 When you're crafting DIY wedding invitations with SVG templates, the first big decision is which cutting machine to trust with your precious paper and vinyl. Cricut and Silhouette dominate the market, but they serve crafters differently. In this 2025 comparison, we'll dive into cutting precision, software usability, material compatibility, and cost—so you can confidently pick the machine that fits your wedding stationery workflow.
 

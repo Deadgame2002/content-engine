@@ -23,7 +23,10 @@ faq:
     answer: Yes, if the original is 300 DPI and large enough. Always scale down, never up. If you need to enlarge, use vector files (SVG) or print the original at a smaller size.
   - question: Where can I find free printable junk journal clipart flowers?
     answer: Many blogs offer freebies, but they're often low resolution. For quality, invest in a paid set or a subscription like Creative Fabrica, where you can download thousands of images for a small monthly fee.
+image: https://i.ibb.co/v6TvN4fb/site3-2026-08-05-top-7-printable-junk-journal-clipart-flowers-vintage-spreads-cover.jpg
 ---
+
+![Vintage floral clipart on aged paper with scissors and tea-stained edges](https://i.ibb.co/v6TvN4fb/site3-2026-08-05-top-7-printable-junk-journal-clipart-flowers-vintage-spreads-cover.jpg)
 
 If you're hunting for **printable junk journal clipart flowers** that actually look aged and romantic — not flat and digital — you need to know which sets are worth your printer ink. The best vintage floral clipart isn't just pretty; it has texture, muted tones, and high-resolution details that survive printing and layering. In this guide, I'm breaking down the top 7 printable floral clipart collections for vintage junk journal spreads, plus exact paper and sizing tips so your pages look like they came from a 1920s botanical diary.
 
