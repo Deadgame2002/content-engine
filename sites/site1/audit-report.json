@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-08-04T21:01:38.515Z",
+  "timestamp": "2026-08-05T20:56:44.224Z",
   "stats": {
-    "total": 51,
-    "ok": 51,
-    "missing_image": 0,
+    "total": 52,
+    "ok": 52,
+    "missing_image": 1,
     "missing_faq": 1,
     "missing_meta": 1,
     "bad_yaml": 0,
@@ -12,6 +12,7 @@
   "issues": [],
   "warnings": [
     "⚠️ Нет или слишком короткая meta_description: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
-    "⚠️ Нет FAQ: 2026-06-23-perfect-cricut-font-layered-vinyl.md"
+    "⚠️ Нет FAQ: 2026-06-23-perfect-cricut-font-layered-vinyl.md",
+    "⚠️ Нет обложки (image): 2026-08-05-cricut-fonts-for-farmhouse-signs.md"
   ]
 }
